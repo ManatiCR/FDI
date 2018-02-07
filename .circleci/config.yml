@@ -94,8 +94,8 @@ jobs:
           name: Deploy
           command: |
             # @TODO: Configure git.
-            git config --global user.email ""
-            git config --global user.name ""
+            git config --global user.email "ci@estudiomanati.com"
+            git config --global user.name "CI Bot"
             echo 'Host *' >> /root/.ssh/config
             echo '   StrictHostKeyChecking no' >> /root/.ssh/config
             ahoy site deploy master "Auto deploy triggered from master branch"
