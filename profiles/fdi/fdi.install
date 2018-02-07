@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for FDI profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function fdi_install() {
+}
