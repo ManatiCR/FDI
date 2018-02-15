@@ -1,0 +1,16 @@
+uuid: 42a889cf-bf85-4049-81bb-2670700b9113
+langcode: en
+status: true
+dependencies: {  }
+id: administrador_de_contenido
+label: 'Administrador de contenido'
+weight: 2
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'change own username'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'
