@@ -20,7 +20,9 @@
     "drupal/core": "8.4.4",
     "drupal/adminimal_admin_toolbar": "1.5",
     "drupal/ctools": "3.0",
-    "drupal/devel": "1.2"
+    "drupal/default_content": "1.0-alpha7",
+    "drupal/devel": "1.2",
+    "drupal/graphql": "3.0-beta4"
   },
   "require-dev": {
     "TestDrupal/BehatExtension": "dev-update",
