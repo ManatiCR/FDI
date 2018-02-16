@@ -1,0 +1,46 @@
+uuid: e06d50f3-5ee3-474d-9d3b-371cd1fd886b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.bloque_de_contenido.body
+    - field.field.node.bloque_de_contenido.field_imagen
+    - field.field.node.bloque_de_contenido.field_tipo
+    - node.type.bloque_de_contenido
+  module:
+    - image
+    - options
+    - text
+    - user
+id: node.bloque_de_contenido.default
+targetEntityType: node
+bundle: bloque_de_contenido
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_imagen:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tipo:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

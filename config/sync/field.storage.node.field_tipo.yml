@@ -1,0 +1,48 @@
+uuid: 95f6c6ce-74cf-4314-9adc-0d15abdda139
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo
+field_name: field_tipo
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: home_reporte
+      label: 'Homepage: Reportá'
+    -
+      value: home_derechos
+      label: 'Homepage: Derechos'
+    -
+      value: home_fdi
+      label: 'Homepage: FDI'
+    -
+      value: home_espacios
+      label: 'Homepage: Espacios libres de discriminación'
+    -
+      value: reporte
+      label: Reportá
+    -
+      value: derechos_header
+      label: 'Conocé tus derechos: Header'
+    -
+      value: derechos_footer
+      label: 'Conocé tus derechos: Footer'
+    -
+      value: recursos
+      label: Recursos
+    -
+      value: contacto
+      label: Contacto
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

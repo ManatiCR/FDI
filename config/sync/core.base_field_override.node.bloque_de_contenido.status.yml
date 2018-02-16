@@ -1,0 +1,22 @@
+uuid: 7fac6d04-0b28-43f6-a4dd-243309ec5879
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bloque_de_contenido
+id: node.bloque_de_contenido.status
+field_name: status
+entity_type: node
+bundle: bloque_de_contenido
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
