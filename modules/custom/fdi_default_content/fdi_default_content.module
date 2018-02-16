@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Defines sample default content for test purposes.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function fdi_default_content_form_alter(&$form, &$form_state, $form_id) {
+  $form_ids = ['node_bloque_de_contenido_form', 'node_bloque_de_contenido_edit_form'];
+ if (in_array($form_id, $form_ids)) {
+
+   // Let the field tipo be editable only for super admins.
+   $current_user = \Drupal::currentUser();
+   $roles = $current_user->getRoles();
+   if (in_array('administrador_de_contenido', $roles)) {
+     $form['field_tipo']['#disabled'] = TRUE;
+   }
+
+   $fields = [
+     'field_imagen' => ['derechos_header', 'home_fdi', 'home_derechos'],
+   ];
+
+   foreach ($fields as $field => $value) {
+     $form[$field]['#states'] = [
+       'visible' => [
+         [
+           [':input[name="field_tipo"]' => ['value' => $value[0]]],
+           'or',
+           [':input[name="field_tipo"]' => ['value' => $value[1]]],
+           'or',
+           [':input[name="field_tipo"]' => ['value' => $value[2]]],
+         ],
+       ],
+     ];
+   }
+ }
+}

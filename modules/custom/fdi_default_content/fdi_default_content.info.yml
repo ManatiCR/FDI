@@ -1,0 +1,11 @@
+name: FDI default content
+type: module
+description: 'Default content for FDI'
+package: FDI
+version: 1.0
+core: 8.x
+dependencies:
+  - default_content:default_content
+default_content:
+  taxonomy_term:
+  node:
