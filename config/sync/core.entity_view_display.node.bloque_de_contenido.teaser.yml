@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.bloque_de_contenido.body
+    - field.field.node.bloque_de_contenido.field_imagen
+    - field.field.node.bloque_de_contenido.field_tipo
     - node.type.bloque_de_contenido
   module:
     - text
@@ -28,3 +30,4 @@ content:
 hidden:
   field_imagen: true
   field_tipo: true
+  langcode: true
