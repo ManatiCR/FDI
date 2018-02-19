@@ -1,0 +1,45 @@
+uuid: d4d0fec1-44fd-4296-a19b-fb3be8e7c65a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.directorio.field_correo
+    - field.field.node.directorio.field_telefono
+    - node.type.directorio
+id: node.directorio.default
+targetEntityType: node
+bundle: directorio
+mode: default
+content:
+  field_correo:
+    weight: -1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_telefono:
+    weight: -2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: -3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
