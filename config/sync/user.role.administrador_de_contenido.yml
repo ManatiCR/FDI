@@ -11,6 +11,8 @@ permissions:
   - 'access toolbar'
   - 'administer nodes'
   - 'change own username'
+  - 'edit any bloque_de_contenido content'
+  - 'use text format wysiwyg'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

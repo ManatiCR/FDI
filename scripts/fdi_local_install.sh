@@ -7,5 +7,7 @@ echo "Set site uuid..."
 ahoy drush config-set "system.site" uuid "$SITE_UUID" -y
 echo "Importing config..."
 if [ -f ./config/sync/core.extension.yml ] ; then ahoy drush cim -y ; fi
+echo "Translations..."
+ahoy drush locale-check && ahoy drush locale-update
 echo "Cleaning cache..."
 ahoy drush cr

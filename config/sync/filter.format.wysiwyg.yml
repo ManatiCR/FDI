@@ -1,0 +1,8 @@
+uuid: 2d3ab808-f709-41b0-8e6f-350569ad9512
+langcode: en
+status: true
+dependencies: {  }
+name: Wysiwyg
+format: wysiwyg
+weight: 0
+filters: {  }
