@@ -1,0 +1,22 @@
+uuid: bc366343-eff9-462a-a0d6-4f12e7b4da0c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.derecho
+  module:
+    - text
+id: node.derecho.body
+field_name: body
+entity_type: node
+bundle: derecho
+label: Texto
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
