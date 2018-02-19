@@ -1,0 +1,38 @@
+uuid: 103f6bfe-52fe-4651-a168-9ba08bd2b0fa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.derecho.body
+    - field.field.node.derecho.field_imagen
+    - node.type.derecho
+  module:
+    - image
+    - text
+    - user
+id: node.derecho.default
+targetEntityType: node
+bundle: derecho
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_imagen:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
