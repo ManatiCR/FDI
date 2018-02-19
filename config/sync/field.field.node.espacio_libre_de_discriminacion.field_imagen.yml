@@ -11,7 +11,7 @@ id: node.espacio_libre_de_discriminacion.field_imagen
 field_name: field_imagen
 entity_type: node
 bundle: espacio_libre_de_discriminacion
-label: Imagen
+label: Logo
 description: ''
 required: false
 translatable: true
