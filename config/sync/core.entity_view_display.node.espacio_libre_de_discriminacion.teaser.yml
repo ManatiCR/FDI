@@ -1,0 +1,19 @@
+uuid: ff0b96a6-0e15-437f-be8d-6c56ca7c4317
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.espacio_libre_de_discriminacion
+  module:
+    - user
+id: node.espacio_libre_de_discriminacion.teaser
+targetEntityType: node
+bundle: espacio_libre_de_discriminacion
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
