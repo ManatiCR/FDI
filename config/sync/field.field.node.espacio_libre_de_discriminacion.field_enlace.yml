@@ -1,0 +1,23 @@
+uuid: b46b0f0a-4b6c-4008-8971-0499c1e2b60e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enlace
+    - node.type.espacio_libre_de_discriminacion
+  module:
+    - link
+id: node.espacio_libre_de_discriminacion.field_enlace
+field_name: field_enlace
+entity_type: node
+bundle: espacio_libre_de_discriminacion
+label: Enlace
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link
