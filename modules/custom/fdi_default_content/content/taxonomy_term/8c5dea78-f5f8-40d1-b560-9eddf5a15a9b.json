@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/es\/taxonomy\/term\/6?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/categorias_recursos_juridicos"
+        }
+    },
+    "tid": [
+        {
+            "value": 6
+        }
+    ],
+    "uuid": [
+        {
+            "value": "8c5dea78-f5f8-40d1-b560-9eddf5a15a9b"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es",
+            "lang": "es"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "categorias_recursos_juridicos"
+        }
+    ],
+    "name": [
+        {
+            "value": "Jurisprudencia costarricense",
+            "lang": "es"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-02-20T22:59:19+00:00",
+            "lang": "es",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "es"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "es",
+            "lang": "es"
+        }
+    ]
+}
