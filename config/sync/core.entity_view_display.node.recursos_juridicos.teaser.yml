@@ -1,0 +1,25 @@
+uuid: 7db4092c-1b13-4960-941f-9bdec6674b19
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.recursos_juridicos.field_categoria
+    - field.field.node.recursos_juridicos.field_enlace
+    - field.field.node.recursos_juridicos.field_vigencia
+    - node.type.recursos_juridicos
+  module:
+    - user
+id: node.recursos_juridicos.teaser
+targetEntityType: node
+bundle: recursos_juridicos
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_categoria: true
+  field_enlace: true
+  field_vigencia: true
+  langcode: true

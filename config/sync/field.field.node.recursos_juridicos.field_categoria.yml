@@ -1,0 +1,29 @@
+uuid: 7a408342-696b-451c-9b48-3c3ece51e14c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria
+    - node.type.recursos_juridicos
+    - taxonomy.vocabulary.categorias_recursos_juridicos
+id: node.recursos_juridicos.field_categoria
+field_name: field_categoria
+entity_type: node
+bundle: recursos_juridicos
+label: Categoría
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categorias_recursos_juridicos: categorias_recursos_juridicos
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

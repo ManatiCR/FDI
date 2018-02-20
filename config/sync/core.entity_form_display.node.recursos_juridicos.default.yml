@@ -1,0 +1,53 @@
+uuid: 096a7b02-8a17-4c1e-8ce8-0baa8a4d6afb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.recursos_juridicos.field_categoria
+    - field.field.node.recursos_juridicos.field_enlace
+    - field.field.node.recursos_juridicos.field_vigencia
+    - node.type.recursos_juridicos
+  module:
+    - datetime
+    - link
+id: node.recursos_juridicos.default
+targetEntityType: node
+bundle: recursos_juridicos
+mode: default
+content:
+  field_categoria:
+    weight: -3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_enlace:
+    weight: -1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_vigencia:
+    weight: -2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  title:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

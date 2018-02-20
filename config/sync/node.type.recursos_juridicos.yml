@@ -1,0 +1,17 @@
+uuid: 9c78cf95-7191-4190-838f-83e0b5f623ff
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Recursos jurídicos'
+type: recursos_juridicos
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
