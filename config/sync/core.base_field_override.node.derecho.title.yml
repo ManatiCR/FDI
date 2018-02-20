@@ -1,0 +1,18 @@
+uuid: 30d853ed-94de-4bd9-bc0a-31fa1afabd65
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.derecho
+id: node.derecho.title
+field_name: title
+entity_type: node
+bundle: derecho
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

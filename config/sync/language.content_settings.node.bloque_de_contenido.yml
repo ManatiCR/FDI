@@ -1,0 +1,11 @@
+uuid: 6ff16080-cf86-4b48-bf7e-38325082d2f0
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.bloque_de_contenido
+id: node.bloque_de_contenido
+target_entity_type_id: node
+target_bundle: bloque_de_contenido
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,18 @@
+uuid: c1a429af-71b1-45cf-b541-e47f35d845aa
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.espacio_libre_de_discriminacion
+id: node.espacio_libre_de_discriminacion.title
+field_name: title
+entity_type: node
+bundle: espacio_libre_de_discriminacion
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

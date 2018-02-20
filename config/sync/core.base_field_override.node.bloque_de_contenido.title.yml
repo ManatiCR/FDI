@@ -1,0 +1,18 @@
+uuid: 629292f2-91e5-43fe-8652-52c635364828
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.bloque_de_contenido
+id: node.bloque_de_contenido.title
+field_name: title
+entity_type: node
+bundle: bloque_de_contenido
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
