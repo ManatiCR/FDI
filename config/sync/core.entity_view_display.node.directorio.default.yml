@@ -1,0 +1,35 @@
+uuid: 98e00493-8810-4794-956a-244a3dae35d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.directorio.field_correo
+    - field.field.node.directorio.field_telefono
+    - node.type.directorio
+  module:
+    - user
+id: node.directorio.default
+targetEntityType: node
+bundle: directorio
+mode: default
+content:
+  field_correo:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_telefono:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
