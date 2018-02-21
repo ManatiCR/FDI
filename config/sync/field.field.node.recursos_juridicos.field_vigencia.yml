@@ -1,0 +1,21 @@
+uuid: 6cc271ff-420c-4ad5-9ce9-577a94349a89
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vigencia
+    - node.type.recursos_juridicos
+  module:
+    - datetime
+id: node.recursos_juridicos.field_vigencia
+field_name: field_vigencia
+entity_type: node
+bundle: recursos_juridicos
+label: Vigencia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

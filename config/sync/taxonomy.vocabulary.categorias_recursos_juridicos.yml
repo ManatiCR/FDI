@@ -1,0 +1,9 @@
+uuid: d21bcb9e-c3ea-4d2c-af30-af82f26a86e6
+langcode: es
+status: true
+dependencies: {  }
+name: 'Categorías recursos jurídicos'
+vid: categorias_recursos_juridicos
+description: ''
+hierarchy: 0
+weight: 0

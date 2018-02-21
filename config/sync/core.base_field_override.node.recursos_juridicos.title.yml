@@ -1,0 +1,18 @@
+uuid: b0de9817-fe60-4440-8219-b1b3065d1d7f
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.recursos_juridicos
+id: node.recursos_juridicos.title
+field_name: title
+entity_type: node
+bundle: recursos_juridicos
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
