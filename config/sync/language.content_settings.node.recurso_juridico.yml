@@ -1,0 +1,11 @@
+uuid: 531aa803-c1a0-4b01-abe4-b637a7c12111
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.recurso_juridico
+id: node.recurso_juridico
+target_entity_type_id: node
+target_bundle: recurso_juridico
+default_langcode: site_default
+language_alterable: false
