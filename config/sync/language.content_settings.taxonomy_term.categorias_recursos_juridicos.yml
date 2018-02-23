@@ -1,0 +1,11 @@
+uuid: 8dd99fd9-e658-4676-be68-ce0d90963468
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categorias_recursos_juridicos
+id: taxonomy_term.categorias_recursos_juridicos
+target_entity_type_id: taxonomy_term
+target_bundle: categorias_recursos_juridicos
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,29 @@
+uuid: 6081a7ff-8598-4293-ba97-ed1971b77862
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria_recurso_juridico
+    - node.type.recurso_juridico
+    - taxonomy.vocabulary.categorias_recursos_juridicos
+id: node.recurso_juridico.field_categoria_recurso_juridico
+field_name: field_categoria_recurso_juridico
+entity_type: node
+bundle: recurso_juridico
+label: Categoría
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categorias_recursos_juridicos: categorias_recursos_juridicos
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

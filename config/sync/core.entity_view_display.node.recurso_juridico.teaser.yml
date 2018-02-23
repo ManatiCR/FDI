@@ -1,21 +1,19 @@
-uuid: ff0b96a6-0e15-437f-be8d-6c56ca7c4317
+uuid: 5c6211f8-976f-4b1d-8cb2-798b5bece68e
 langcode: es
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - node.type.espacio_libre_de_discriminacion
+    - node.type.recurso_juridico
   module:
     - user
-id: node.espacio_libre_de_discriminacion.teaser
+id: node.recurso_juridico.teaser
 targetEntityType: node
-bundle: espacio_libre_de_discriminacion
+bundle: recurso_juridico
 mode: teaser
 content:
   links:
     weight: 100
     region: content
 hidden:
-  field_enlace: true
-  field_imagen: true
   langcode: true
