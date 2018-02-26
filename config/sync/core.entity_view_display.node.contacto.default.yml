@@ -1,0 +1,51 @@
+uuid: 3e44232f-f65d-4786-869c-1511258ae15f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.contacto.body
+    - field.field.node.contacto.field_codigo_de_seguimient
+    - field.field.node.contacto.field_correo
+    - field.field.node.contacto.field_telefono
+    - node.type.contacto
+  module:
+    - text
+    - user
+id: node.contacto.default
+targetEntityType: node
+bundle: contacto
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_codigo_de_seguimient:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_correo:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_telefono:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  links: true

@@ -1,0 +1,22 @@
+uuid: b53c5a70-9fb5-436c-9731-72c57f071e57
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.contacto
+  module:
+    - text
+id: node.contacto.body
+field_name: body
+entity_type: node
+bundle: contacto
+label: Mensaje
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
