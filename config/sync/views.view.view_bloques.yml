@@ -8,6 +8,7 @@ dependencies:
   module:
     - node
     - options
+    - user
 id: view_bloques
 label: Bloques
 module: views
@@ -24,8 +25,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'See admin list pages'
       cache:
         type: tag
         options: {  }
@@ -299,6 +301,7 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_tipo'
   page_1:
@@ -331,5 +334,6 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_tipo'

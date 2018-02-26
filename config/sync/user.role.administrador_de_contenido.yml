@@ -7,6 +7,7 @@ label: 'Administrador de contenido'
 weight: 2
 is_admin: null
 permissions:
+  - 'See admin list pages'
   - 'access content overview'
   - 'access toolbar'
   - 'administer nodes'
