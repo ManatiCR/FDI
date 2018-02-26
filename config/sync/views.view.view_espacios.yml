@@ -7,6 +7,7 @@ dependencies:
     - node.type.espacio_libre_de_discriminacion
   module:
     - node
+    - user
 id: view_espacios
 label: Espacios
 module: views
@@ -23,8 +24,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'See admin list pages'
       cache:
         type: tag
         options: {  }
@@ -310,6 +312,7 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
+        - user.permissions
       tags: {  }
   page_1:
     display_plugin: page
@@ -327,4 +330,5 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
+        - user.permissions
       tags: {  }

@@ -27,7 +27,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'See admin list pages'
       cache:
         type: tag
         options: {  }
