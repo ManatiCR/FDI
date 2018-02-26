@@ -1,0 +1,6 @@
+#This file contains custom permissions for the fdi_default_content module.
+
+'See admin list pages':
+  title: 'See admin list pages'
+  description: 'Give access to the administrators to see the administrative list pages.'
+  restrict access: true
