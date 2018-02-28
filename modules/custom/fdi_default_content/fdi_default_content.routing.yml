@@ -1,0 +1,10 @@
+
+fdi_default_content.email_config_form:
+  path: '/admin/config/emailconfig'
+  defaults:
+    _form: '\Drupal\fdi_default_content\Form\EmailConfigForm'
+    _title: 'Direcciones de correo'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

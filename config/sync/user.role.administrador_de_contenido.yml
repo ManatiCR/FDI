@@ -16,6 +16,7 @@ permissions:
   - 'create directorio content'
   - 'create espacio_libre_de_discriminacion content'
   - 'create recurso_juridico content'
+  - 'delete any contacto content'
   - 'delete any derecho content'
   - 'delete any directorio content'
   - 'delete any espacio_libre_de_discriminacion content'

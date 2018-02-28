@@ -6,6 +6,7 @@ version: 1.0
 core: 8.x
 dependencies:
   - default_content:default_content
+  - graphql_core
 default_content:
   taxonomy_term:
     - 1c6c5a18-4950-4ada-9231-3cd7d63bf4f2

@@ -1,0 +1,29 @@
+uuid: 215ee395-8571-4511-abee-98228aba54bd
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.contacto.body
+    - node.type.contacto
+  module:
+    - text
+    - user
+id: node.contacto.teaser
+targetEntityType: node
+bundle: contacto
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

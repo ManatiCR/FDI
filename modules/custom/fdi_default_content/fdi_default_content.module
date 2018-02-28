@@ -38,3 +38,51 @@ function fdi_default_content_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 }
+
+/**
+ * Implements hook_mail().
+ */
+function fdi_default_content_mail($key, &$message, $params) {
+
+  switch ($key) {
+    case 'insert_contacto_node':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = $params['message_subject'];
+      $message['body']['message_intro'] = $params['message_intro'];
+      $message['body']['nombre'] = "Nombre:\n" . $params['entity']->get('title')->getValue()[0]['value'];
+      $message['body']['email'] = "Correo electrónico:\n" . $params['entity']->get('field_correo')->getValue()[0]['value'];
+      $message['body']['telefono'] = "Teléfono:\n" . $params['entity']->get('field_telefono')->getValue()[0]['value'];
+      $message['body']['codigo'] = "Código de seguimiento:\n" . $params['entity']->get('field_codigo_de_seguimient')->getValue()[0]['value'];
+      $message['body']['mensaje'] = "Mensaje:\n" . $params['entity']->get('body')->getValue()[0]['value'];
+      break;
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function fdi_default_content_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'contacto') {
+
+    $email_direccions = \Drupal::config('fdi_default_content.emailconfig')->get('email');
+    $email_direccions = preg_replace('/\s+/', ',', $email_direccions);
+
+    $mail_manager = \Drupal::service('plugin.manager.mail');
+
+    $module = 'fdi_default_content';
+    $key = 'insert_contacto_node';
+    $to = $email_direccions;
+    $send = TRUE;
+    $params['entity'] = $entity;
+    $params['message_intro'] = \Drupal::config('fdi_default_content.emailconfig')->get('message_intro');
+    $params['message_subject'] = \Drupal::config('fdi_default_content.emailconfig')->get('message_subject');
+    $result = $mail_manager->mail($module, $key, $to, 'es', $params, NULL, $send);
+    if ($result['result'] !== TRUE) {
+      $message = t('There was a problem sending your email notification to @email for creating node @id.', array('@email' => $to, '@id' => $entity->id()));
+      drupal_set_message($message, 'error');
+      \Drupal::logger('fdi_default_content')->error($message);
+      return;
+    }
+  }
+
+}
