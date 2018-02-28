@@ -492,7 +492,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/fdi/bloques/contactos
+      path: admin/fdi/contactos
       display_description: ''
     cache_metadata:
       max-age: 0
