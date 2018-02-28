@@ -35,7 +35,7 @@ class CreateContacto extends CreateEntityBase {
       'field_correo' => $input_args['field_correo'],
       'field_telefono' => $input_args['field_telefono'],
       'body' => $input_args['body'],
-      'field_codigo_de_seguimiento' => $input_args['field_codigo_de_seguimiento'],
+      'field_codigo_de_seguimient' => $input_args['field_codigo_de_seguimient'],
     ];
   }
 

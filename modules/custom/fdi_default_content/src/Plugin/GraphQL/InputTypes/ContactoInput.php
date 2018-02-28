@@ -29,7 +29,7 @@ use Drupal\graphql\Plugin\GraphQL\InputTypes\InputTypePluginBase;
  *        "type" = "String",
  *        "nullable" = "TRUE"
  *     },
- *     "field_codigo_de_seguimiento" = {
+ *     "field_codigo_de_seguimient" = {
  *        "type" = "String",
  *        "nullable" = "TRUE"
  *     }
