@@ -49,11 +49,11 @@ function fdi_default_content_mail($key, &$message, $params) {
       $message['from'] = \Drupal::config('system.site')->get('mail');
       $message['subject'] = $params['message_subject'];
       $message['body']['message_intro'] = $params['message_intro'];
-      $message['body']['nombre'] = 'Nombre: ' . $params['entity']->get('title')->getValue()[0]['value'];
-      $message['body']['email'] = 'Correo electrónico: ' . $params['entity']->get('field_correo')->getValue()[0]['value'];
-      $message['body']['telefono'] = 'Teléfono: ' . $params['entity']->get('field_telefono')->getValue()[0]['value'];
-      $message['body']['codigo'] = 'Código de seguimiento: ' . $params['entity']->get('field_codigo_de_seguimient')->getValue()[0]['value'];
-      $message['body']['mensaje'] = 'Mensaje: ' . $params['entity']->get('body')->getValue()[0]['value'];
+      $message['body']['nombre'] = "Nombre:\n" . $params['entity']->get('title')->getValue()[0]['value'];
+      $message['body']['email'] = "Correo electrónico:\n" . $params['entity']->get('field_correo')->getValue()[0]['value'];
+      $message['body']['telefono'] = "Teléfono:\n" . $params['entity']->get('field_telefono')->getValue()[0]['value'];
+      $message['body']['codigo'] = "Código de seguimiento:\n" . $params['entity']->get('field_codigo_de_seguimient')->getValue()[0]['value'];
+      $message['body']['mensaje'] = "Mensaje:\n" . $params['entity']->get('body')->getValue()[0]['value'];
       break;
   }
 }
