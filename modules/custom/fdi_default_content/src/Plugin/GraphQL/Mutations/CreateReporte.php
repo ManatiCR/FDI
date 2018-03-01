@@ -33,7 +33,7 @@ class CreateReporte extends CreateEntityBase {
     $codigo_seguimiento = 0;
     $result = 1;
     do {
-      $codigo_seguimiento = substr(md5(uniqid(mt_rand(), true)), 0, 8);
+      $codigo_seguimiento = substr(md5(uniqid(mt_rand(), TRUE)), 0, 8);
       $query = \Drupal::service('entity.query')
         ->get('node')
         ->condition('type', 'reporte')
