@@ -1,0 +1,19 @@
+uuid: fe39854b-d827-4d9a-a714-768e418bc3b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_codigo_de_seguimient
+    - node.type.reporte
+id: node.reporte.field_codigo_de_seguimient
+field_name: field_codigo_de_seguimient
+entity_type: node
+bundle: reporte
+label: 'Código de seguimiento'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 42d0cb44-f321-4db5-bd9c-b28351da88ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_correo
+    - node.type.reporte
+id: node.reporte.field_correo
+field_name: field_correo
+entity_type: node
+bundle: reporte
+label: 'Correo electrónico'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

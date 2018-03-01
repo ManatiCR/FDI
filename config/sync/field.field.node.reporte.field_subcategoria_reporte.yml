@@ -1,0 +1,29 @@
+uuid: 8988e8a5-639f-4e4f-9344-96a1b92dde1d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subcategoria_reporte
+    - node.type.reporte
+    - taxonomy.vocabulary.subcategorias_de_reporte
+id: node.reporte.field_subcategoria_reporte
+field_name: field_subcategoria_reporte
+entity_type: node
+bundle: reporte
+label: Subcategoría
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subcategorias_de_reporte: subcategorias_de_reporte
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

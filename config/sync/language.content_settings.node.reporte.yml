@@ -1,0 +1,11 @@
+uuid: 06452afd-d263-4823-8195-a5d3031f9878
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.reporte
+id: node.reporte
+target_entity_type_id: node
+target_bundle: reporte
+default_langcode: site_default
+language_alterable: false
