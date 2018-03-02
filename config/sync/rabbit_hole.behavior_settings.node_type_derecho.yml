@@ -1,0 +1,9 @@
+uuid: 511c2ca7-5d25-4d91-a636-2584c88a27e5
+langcode: en
+status: true
+dependencies: {  }
+id: node_type_derecho
+action: page_redirect
+allow_override: 1
+redirect: /admin/fdi/derechos
+redirect_code: 301

@@ -1,0 +1,9 @@
+uuid: dff02d6f-7a7b-47a1-ae07-eeb7633fca5a
+langcode: en
+status: true
+dependencies: {  }
+id: node_type_bloque_de_contenido
+action: page_redirect
+allow_override: 1
+redirect: /admin/fdi/bloques
+redirect_code: 301

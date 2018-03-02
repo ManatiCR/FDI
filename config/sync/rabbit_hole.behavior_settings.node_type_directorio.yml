@@ -1,0 +1,9 @@
+uuid: 629a9a0a-4739-488d-b2a9-9f041f42df00
+langcode: en
+status: true
+dependencies: {  }
+id: node_type_directorio
+action: page_redirect
+allow_override: 1
+redirect: /admin/fdi/directorio
+redirect_code: 301
