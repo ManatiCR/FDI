@@ -1,0 +1,11 @@
+uuid: 39e60003-81be-49cf-bdef-b37d8b270e08
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.machote
+id: node.machote
+target_entity_type_id: node
+target_bundle: machote
+default_langcode: site_default
+language_alterable: false

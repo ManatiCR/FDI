@@ -1,0 +1,29 @@
+uuid: 87d19269-6cec-4e25-89d8-222d6ff7295b
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.machote.body
+    - node.type.machote
+  module:
+    - text
+    - user
+id: node.machote.teaser
+targetEntityType: node
+bundle: machote
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
