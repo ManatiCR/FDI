@@ -1,0 +1,17 @@
+<div class="fdi-admin-page-wrapper">
+  {% set items = [
+    {'route':'fdi_default_content.email_config_form','title':'Formulario de contacto'},
+    {'route':'view.contactos.page_1','title':'Contactos'},
+    {'route':'view.derechos.page_1','title':'Derechos'},
+    {'route':'view.directorio.page_1','title':'Directorio'},
+    {'route':'view.view_espacios.page_1','title':'Espacios'},
+    {'route':'view.machotes.page_1','title':'Machotes de denucia'},
+    {'route':'view.recursos_juridicos.page_1','title':'Recursos Jurídicos'},
+    {'route':'view.reportes.page_1','title':'Reportes'}
+  ] %}
+  <ul>
+    {% for item in items %}
+      <li><a href="{{ path(item.route) }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
