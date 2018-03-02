@@ -23,6 +23,7 @@
     "drupal/default_content": "1.0-alpha7",
     "drupal/devel": "1.2",
     "drupal/graphql": "3.0-beta4",
+    "drupal/rabbit_hole": "1.0-beta4",
     "drupal/smtp": "1.0-beta3"
   },
   "require-dev": {
