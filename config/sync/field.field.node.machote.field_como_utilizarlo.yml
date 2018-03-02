@@ -11,7 +11,7 @@ id: node.machote.field_como_utilizarlo
 field_name: field_como_utilizarlo
 entity_type: node
 bundle: machote
-label: 'Cómo utilizarlo'
+label: '¿Cómo utilizarlo?'
 description: ''
 required: false
 translatable: false
