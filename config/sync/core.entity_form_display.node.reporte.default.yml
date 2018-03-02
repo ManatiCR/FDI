@@ -1,0 +1,103 @@
+uuid: 23496401-9166-4097-9729-43fdfb8494e3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.reporte.body
+    - field.field.node.reporte.field_categoria_reporte
+    - field.field.node.reporte.field_codigo_de_seguimient
+    - field.field.node.reporte.field_correo
+    - field.field.node.reporte.field_latitud
+    - field.field.node.reporte.field_longitud
+    - field.field.node.reporte.field_lugar
+    - field.field.node.reporte.field_solicita_asesoria_o_apoyo
+    - field.field.node.reporte.field_subcategoria_reporte
+    - node.type.reporte
+  module:
+    - text
+id: node.reporte.default
+targetEntityType: node
+bundle: reporte
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_categoria_reporte:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_codigo_de_seguimient:
+    weight: 129
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_correo:
+    weight: 128
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_latitud:
+    weight: 125
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_longitud:
+    weight: 126
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_lugar:
+    weight: 124
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_solicita_asesoria_o_apoyo:
+    weight: 127
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_subcategoria_reporte:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

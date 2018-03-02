@@ -1,0 +1,18 @@
+uuid: 0b63522a-fe92-4610-9287-67e87513adf8
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.reporte
+id: node.reporte.title
+field_name: title
+entity_type: node
+bundle: reporte
+label: Nombre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

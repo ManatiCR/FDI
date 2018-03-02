@@ -21,6 +21,7 @@ permissions:
   - 'delete any directorio content'
   - 'delete any espacio_libre_de_discriminacion content'
   - 'delete any recurso_juridico content'
+  - 'delete any reporte content'
   - 'edit any bloque_de_contenido content'
   - 'edit any derecho content'
   - 'edit any directorio content'

@@ -1,0 +1,21 @@
+uuid: 443bb756-a8a4-4cb4-867a-1bf630d5be3d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solicita_asesoria_o_apoyo
+    - node.type.reporte
+  module:
+    - options
+id: node.reporte.field_solicita_asesoria_o_apoyo
+field_name: field_solicita_asesoria_o_apoyo
+entity_type: node
+bundle: reporte
+label: 'Solicita asesoría o apoyo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
