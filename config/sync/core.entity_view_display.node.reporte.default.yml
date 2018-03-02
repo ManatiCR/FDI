@@ -1,0 +1,101 @@
+uuid: 163f399d-7862-46d9-880c-3ec196212997
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.reporte.body
+    - field.field.node.reporte.field_categoria_reporte
+    - field.field.node.reporte.field_codigo_de_seguimient
+    - field.field.node.reporte.field_correo
+    - field.field.node.reporte.field_latitud
+    - field.field.node.reporte.field_longitud
+    - field.field.node.reporte.field_lugar
+    - field.field.node.reporte.field_solicita_asesoria_o_apoyo
+    - field.field.node.reporte.field_subcategoria_reporte
+    - node.type.reporte
+  module:
+    - options
+    - text
+    - user
+id: node.reporte.default
+targetEntityType: node
+bundle: reporte
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_categoria_reporte:
+    weight: 102
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_codigo_de_seguimient:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_correo:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_latitud:
+    weight: 105
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_longitud:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_lugar:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_solicita_asesoria_o_apoyo:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_subcategoria_reporte:
+    weight: 103
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  langcode: true
+  links: true

@@ -1,0 +1,29 @@
+uuid: 8914f67a-facb-413b-83bd-db6a37192474
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.reporte.body
+    - node.type.reporte
+  module:
+    - text
+    - user
+id: node.reporte.teaser
+targetEntityType: node
+bundle: reporte
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

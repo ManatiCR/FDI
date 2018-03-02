@@ -1,0 +1,27 @@
+uuid: 7da85ef3-5ffe-4996-8dba-096022441284
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_solicita_asesoria_o_apoyo
+field_name: field_solicita_asesoria_o_apoyo
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: si
+      label: Sí
+    -
+      value: 'no'
+      label: 'No'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

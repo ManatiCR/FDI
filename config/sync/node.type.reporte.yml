@@ -1,0 +1,17 @@
+uuid: c3deb14f-dbcc-429e-a518-34986f7f815d
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Reporte
+type: reporte
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

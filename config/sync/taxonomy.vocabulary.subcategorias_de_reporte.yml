@@ -1,0 +1,9 @@
+uuid: 8841cfd2-0788-4b1d-9b84-1edac51b8de9
+langcode: es
+status: true
+dependencies: {  }
+name: 'Subcategorías de reporte'
+vid: subcategorias_de_reporte
+description: ''
+hierarchy: 0
+weight: 0
