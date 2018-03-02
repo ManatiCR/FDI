@@ -86,3 +86,12 @@ function fdi_default_content_entity_insert(Drupal\Core\Entity\EntityInterface $e
   }
 
 }
+
+/**
+ * Implements hook_theme().
+ */
+function fdi_default_content_theme($existing, $type, $theme, $path) {
+  return [
+    'fdi_admin_page' => [],
+  ];
+}

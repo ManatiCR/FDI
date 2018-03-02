@@ -1,0 +1,22 @@
+uuid: d849f8e9-f1dc-4db9-89df-43ce427feea8
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.machote
+id: node.machote.promote
+field_name: promote
+entity_type: node
+bundle: machote
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

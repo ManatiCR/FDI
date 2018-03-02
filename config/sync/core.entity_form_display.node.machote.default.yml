@@ -1,0 +1,58 @@
+uuid: e59db5fa-8b38-4677-a2ce-cfde50b182c4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.machote.body
+    - field.field.node.machote.field_como_utilizarlo
+    - field.field.node.machote.field_machote
+    - node.type.machote
+  module:
+    - file
+    - text
+id: node.machote.default
+targetEntityType: node
+bundle: machote
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_como_utilizarlo:
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_machote:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,22 @@
+uuid: 5fdc9dfc-5dbd-41e2-8d03-f8ed2e3079cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.machote
+  module:
+    - text
+id: node.machote.body
+field_name: body
+entity_type: node
+bundle: machote
+label: Descripción
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
