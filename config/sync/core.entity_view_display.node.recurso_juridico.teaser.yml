@@ -1,0 +1,19 @@
+uuid: 5c6211f8-976f-4b1d-8cb2-798b5bece68e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.recurso_juridico
+  module:
+    - user
+id: node.recurso_juridico.teaser
+targetEntityType: node
+bundle: recurso_juridico
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

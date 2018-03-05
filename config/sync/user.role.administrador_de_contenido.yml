@@ -1,0 +1,38 @@
+uuid: 42a889cf-bf85-4049-81bb-2670700b9113
+langcode: en
+status: true
+dependencies: {  }
+id: administrador_de_contenido
+label: 'Administrador de contenido'
+weight: 2
+is_admin: null
+permissions:
+  - 'See admin list pages'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'change own username'
+  - 'create derecho content'
+  - 'create directorio content'
+  - 'create espacio_libre_de_discriminacion content'
+  - 'create machote content'
+  - 'create recurso_juridico content'
+  - 'delete any contacto content'
+  - 'delete any derecho content'
+  - 'delete any directorio content'
+  - 'delete any espacio_libre_de_discriminacion content'
+  - 'delete any machote content'
+  - 'delete any recurso_juridico content'
+  - 'delete any reporte content'
+  - 'edit any bloque_de_contenido content'
+  - 'edit any derecho content'
+  - 'edit any directorio content'
+  - 'edit any espacio_libre_de_discriminacion content'
+  - 'edit any machote content'
+  - 'edit own recurso_juridico content'
+  - 'use text format wysiwyg'
+  - 'view all revisions'
+  - 'view derecho revisions'
+  - 'view espacio_libre_de_discriminacion revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

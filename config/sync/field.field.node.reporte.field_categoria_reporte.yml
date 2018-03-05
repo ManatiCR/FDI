@@ -1,0 +1,29 @@
+uuid: 34509bf7-c467-45c6-a55c-3c1e3e71de41
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria_reporte
+    - node.type.reporte
+    - taxonomy.vocabulary.categorias_de_reporte
+id: node.reporte.field_categoria_reporte
+field_name: field_categoria_reporte
+entity_type: node
+bundle: reporte
+label: Categoría
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categorias_de_reporte: categorias_de_reporte
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

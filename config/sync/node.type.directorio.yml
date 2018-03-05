@@ -1,0 +1,17 @@
+uuid: cc1ce1fb-8aaa-4d34-b543-b95e4832f874
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Directorio
+type: directorio
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

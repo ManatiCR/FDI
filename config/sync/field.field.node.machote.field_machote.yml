@@ -1,0 +1,27 @@
+uuid: d1fdefc8-792c-40ee-b012-29aae9b92e15
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_machote
+    - node.type.machote
+  module:
+    - file
+id: node.machote.field_machote
+field_name: field_machote
+entity_type: node
+bundle: machote
+label: Machote
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'doc docs pdf txt odt xls xlsx ods'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,19 @@
+uuid: 850b15b2-4463-4b1c-a834-d0981a4b6540
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono
+    - node.type.contacto
+id: node.contacto.field_telefono
+field_name: field_telefono
+entity_type: node
+bundle: contacto
+label: Teléfono
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

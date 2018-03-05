@@ -1,0 +1,9 @@
+uuid: 2dcc2434-d2c8-41f8-8af1-f97068f676e7
+langcode: es
+status: true
+dependencies: {  }
+name: 'Categorías de reporte'
+vid: categorias_de_reporte
+description: ''
+hierarchy: 0
+weight: 0

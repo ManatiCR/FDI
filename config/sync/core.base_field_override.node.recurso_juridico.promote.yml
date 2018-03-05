@@ -1,0 +1,22 @@
+uuid: 947f2c88-840b-42e4-b720-f4f184384427
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.recurso_juridico
+id: node.recurso_juridico.promote
+field_name: promote
+entity_type: node
+bundle: recurso_juridico
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

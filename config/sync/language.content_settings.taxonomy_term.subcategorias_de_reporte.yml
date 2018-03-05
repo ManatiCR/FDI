@@ -1,0 +1,11 @@
+uuid: fb0408c8-efda-4671-916e-4aedfaaccffc
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.subcategorias_de_reporte
+id: taxonomy_term.subcategorias_de_reporte
+target_entity_type_id: taxonomy_term
+target_bundle: subcategorias_de_reporte
+default_langcode: site_default
+language_alterable: false

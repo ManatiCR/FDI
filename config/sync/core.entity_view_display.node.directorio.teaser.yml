@@ -1,0 +1,19 @@
+uuid: 0e4e927b-5a3c-4f1a-907c-5f14f3ff50dd
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.directorio
+  module:
+    - user
+id: node.directorio.teaser
+targetEntityType: node
+bundle: directorio
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

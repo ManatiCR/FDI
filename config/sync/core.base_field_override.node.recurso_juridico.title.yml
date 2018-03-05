@@ -1,0 +1,18 @@
+uuid: e4ae74d3-6fa8-40fc-bafd-a8e52143eab0
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.recurso_juridico
+id: node.recurso_juridico.title
+field_name: title
+entity_type: node
+bundle: recurso_juridico
+label: Titulo
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

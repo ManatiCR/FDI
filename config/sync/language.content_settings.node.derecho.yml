@@ -1,0 +1,11 @@
+uuid: 32212cd3-3689-4220-b95a-bae6aef6a6c5
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.derecho
+id: node.derecho
+target_entity_type_id: node
+target_bundle: derecho
+default_langcode: site_default
+language_alterable: false

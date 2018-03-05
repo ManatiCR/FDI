@@ -1,0 +1,161 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/es\/node\/6?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/bloque_de_contenido"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/bloque_de_contenido\/revision_uid": [
+            {
+                "href": "http:\/\/default\/en\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/bloque_de_contenido\/uid": [
+            {
+                "href": "http:\/\/default\/en\/user\/1?_format=hal_json",
+                "lang": "es"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 6
+        }
+    ],
+    "uuid": [
+        {
+            "value": "fe6c76fa-9205-456c-805b-1c2e5abeafde"
+        }
+    ],
+    "vid": [
+        {
+            "value": 6
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es",
+            "lang": "es"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "bloque_de_contenido"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-02-16T20:41:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/bloque_de_contenido\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/en\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ac73818d-fde2-450c-9131-86b75184e62b"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/bloque_de_contenido\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/en\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ac73818d-fde2-450c-9131-86b75184e62b"
+                    }
+                ],
+                "lang": "es"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "es"
+        }
+    ],
+    "title": [
+        {
+            "value": "Espacios libres de discriminaci\u00f3n",
+            "lang": "es"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-02-16T20:41:12+00:00",
+            "lang": "es",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-02-16T20:41:12+00:00",
+            "lang": "es",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "es"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "es"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "es"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "es"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "es",
+            "lang": "es"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>La discriminaci\u00f3n es un problema real en Costa Rica. Pero tambi\u00e9n sabemos que existen espacios d\u00f3nde podemos sentir seguridad sin miedo a ser discriminados y los aplaudimos. Si conoc\u00e9s alg\u00fan espacio libre de discriminaci\u00f3n, escribinos.<\/p>\r\n",
+            "format": "wysiwyg",
+            "summary": "",
+            "lang": "es"
+        }
+    ],
+    "field_tipo": [
+        {
+            "value": "home_espacios"
+        }
+    ]
+}

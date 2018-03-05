@@ -1,0 +1,18 @@
+uuid: 2b37007f-7d77-450d-99ce-8613ebb5b8da
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.machote
+id: node.machote.title
+field_name: title
+entity_type: node
+bundle: machote
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

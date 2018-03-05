@@ -1,0 +1,44 @@
+uuid: 02497797-025d-4805-b783-30400f7c36aa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.machote.body
+    - field.field.node.machote.field_como_utilizarlo
+    - field.field.node.machote.field_machote
+    - node.type.machote
+  module:
+    - file
+    - text
+    - user
+id: node.machote.default
+targetEntityType: node
+bundle: machote
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_como_utilizarlo:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_machote:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

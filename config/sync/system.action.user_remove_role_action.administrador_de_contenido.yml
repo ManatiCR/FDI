@@ -1,0 +1,14 @@
+uuid: ba6054aa-95f5-419c-b6e9-c4e7da41446a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.administrador_de_contenido
+  module:
+    - user
+id: user_remove_role_action.administrador_de_contenido
+label: 'Remove the Administrador de contenido role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: administrador_de_contenido

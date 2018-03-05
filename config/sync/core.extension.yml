@@ -6,19 +6,27 @@ module:
   ckeditor: 0
   color: 0
   config: 0
+  config_translation: 0
   contextual: 0
   datetime: 0
   dblog: 0
+  default_content: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  fdi_default_content: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  graphql: 0
+  graphql_core: 0
+  hal: 0
   help: 0
   image: 0
+  language: 0
   link: 0
+  locale: 0
   menu_link_content: 0
   menu_ui: 0
   node: 0
@@ -26,8 +34,13 @@ module:
   page_cache: 0
   path: 0
   quickedit: 0
+  rabbit_hole: 0
+  rh_node: 0
   search: 0
+  serialization: 0
+  smtp: 0
   system: 0
+  taxonomy: 0
   text: 0
   toolbar: 0
   update: 0
@@ -43,3 +56,4 @@ theme:
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 profile: fdi
+langcode: es

@@ -1,0 +1,11 @@
+uuid: debd4c2d-adbb-418e-972b-bc7bd3c5843a
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.espacio_libre_de_discriminacion
+id: node.espacio_libre_de_discriminacion
+target_entity_type_id: node
+target_bundle: espacio_libre_de_discriminacion
+default_langcode: site_default
+language_alterable: false
