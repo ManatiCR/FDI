@@ -1,0 +1,9 @@
+uuid: f388230f-26b0-43dc-bbf7-e3c6a87aa43a
+langcode: en
+status: true
+dependencies: {  }
+id: node_type_recurso_juridico
+action: page_redirect
+allow_override: 1
+redirect: /admin/fdi/juridico
+redirect_code: 301

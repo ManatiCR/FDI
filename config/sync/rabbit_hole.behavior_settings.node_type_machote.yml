@@ -1,0 +1,9 @@
+uuid: c8bc6aec-d127-41fe-b354-80e1883b0178
+langcode: en
+status: true
+dependencies: {  }
+id: node_type_machote
+action: page_redirect
+allow_override: 1
+redirect: /admin/fdi/machotes
+redirect_code: 301

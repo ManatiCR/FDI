@@ -1,0 +1,9 @@
+uuid: 954fdc16-e576-4391-b9c0-3824991a004c
+langcode: en
+status: true
+dependencies: {  }
+id: node_type_espacio_libre_de_discriminacion
+action: page_redirect
+allow_override: 1
+redirect: /admin/fdi/espacios
+redirect_code: 301
