@@ -7,7 +7,6 @@
 
 namespace Drupal\fdi_default_content\Plugin\GraphQL\Mutations;
 
-use Drupal\graphql\GraphQL\Type\InputObjectType;
 use Drupal\graphql_core\Plugin\GraphQL\Mutations\Entity\CreateEntityBase;
 use Youshido\GraphQL\Execution\ResolveInfo;
 /**
