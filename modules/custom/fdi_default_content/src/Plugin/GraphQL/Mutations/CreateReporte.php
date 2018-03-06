@@ -7,11 +7,10 @@
 
 namespace Drupal\fdi_default_content\Plugin\GraphQL\Mutations;
 
-use Drupal\graphql\GraphQL\Type\InputObjectType;
 use Drupal\graphql_core\Plugin\GraphQL\Mutations\Entity\CreateEntityBase;
 use Youshido\GraphQL\Execution\ResolveInfo;
 /**
- * Simple mutation for creating a new contacto node.
+ * Simple mutation for creating a new reporte node.
  *
  * @GraphQLMutation(
  *   id = "create_reporte",
@@ -29,7 +28,7 @@ class CreateReporte extends CreateEntityBase {
   /**
    * {@inheritdoc}
    */
-  protected function extractEntityInput(array $input_args, InputObjectType $input_type, ResolveInfo $info) {
+  protected function extractEntityInput(array $args, ResolveInfo $info) {
     $codigo_seguimiento = 0;
     $result = 1;
     do {
@@ -41,16 +40,16 @@ class CreateReporte extends CreateEntityBase {
       $result = $query->execute();
     } while (count($result) > 0);
     return [
-      'title' => $input_args['title'],
-      'field_correo' => $input_args['field_correo'],
-      'body' => $input_args['body'],
+      'title' => $args['input']['title'],
+      'field_correo' => $args['input']['field_correo'],
+      'body' => $args['input']['body'],
       'field_codigo_de_seguimient' => $codigo_seguimiento,
-      'field_categoria_reporte' => $input_args['field_categoria_reporte'],
-      'field_subcategoria_reporte' => $input_args['field_subcategoria_reporte'],
-      'field_latitud' => $input_args['field_latitud'],
-      'field_longitud' => $input_args['field_longitud'],
-      'field_solicita_asesoria_o_apoyo' => $input_args['field_solicita_asesoria_o_apoyo'],
-      'field_lugar' => $input_args['field_lugar'],
+      'field_categoria_reporte' => $args['input']['field_categoria_reporte'],
+      'field_subcategoria_reporte' => $args['input']['field_subcategoria_reporte'],
+      'field_latitud' => $args['input']['field_latitud'],
+      'field_longitud' => $args['input']['field_longitud'],
+      'field_solicita_asesoria_o_apoyo' => $args['input']['field_solicita_asesoria_o_apoyo'],
+      'field_lugar' => $args['input']['field_lugar'],
     ];
   }
 

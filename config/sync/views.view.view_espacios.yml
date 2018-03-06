@@ -298,7 +298,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Espacios
+      title: 'Espacios libres de discriminación'
       header: {  }
       footer: {  }
       empty: {  }

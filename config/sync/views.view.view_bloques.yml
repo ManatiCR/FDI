@@ -287,7 +287,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Bloques
+      title: 'Bloques de contenido'
       header: {  }
       footer: {  }
       empty: {  }
