@@ -314,7 +314,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Machotes
+      title: 'Machotes de denuncia'
       header: {  }
       footer: {  }
       empty: {  }
