@@ -29,13 +29,13 @@ class CreateContacto extends CreateEntityBase {
   /**
    * {@inheritdoc}
    */
-  protected function extractEntityInput(array $input_args, InputObjectType $input_type, ResolveInfo $info) {
+  protected function extractEntityInput(array $args, ResolveInfo $info) {
     return [
-      'title' => $input_args['title'],
-      'field_correo' => $input_args['field_correo'],
-      'field_telefono' => $input_args['field_telefono'],
-      'body' => $input_args['body'],
-      'field_codigo_de_seguimient' => $input_args['field_codigo_de_seguimient'],
+      'title' => $args['input']['title'],
+      'field_correo' => $args['input']['field_correo'],
+      'field_telefono' => $args['input']['field_telefono'],
+      'body' => $args['input']['body'],
+      'field_codigo_de_seguimient' => $args['input']['field_codigo_de_seguimient'],
     ];
   }
 
