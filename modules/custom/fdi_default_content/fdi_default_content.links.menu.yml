@@ -41,7 +41,7 @@ fdi_default_content.fdi_espacios:
   parent: fdi_default_content.fdi
   weight: 5
 fdi_default_content.fdi_machotes:
-  title: 'Machotes de denucia'
+  title: 'Machotes de denuncia'
   route_name: view.machotes.page_1
   description: 'Machotes admin list page'
   parent: fdi_default_content.fdi
