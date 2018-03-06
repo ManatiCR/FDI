@@ -5,19 +5,19 @@ fdi_default_content.fdi:
   parent: system.admin
   weight: 1
 fdi_default_content.fdi_emails:
-  title: 'Formulario de contacto'
+  title: 'Configuración del formulario de contacto'
   route_name: fdi_default_content.email_config_form
   description: 'Emails config form'
   parent: fdi_default_content.fdi
   weight: 0
 fdi_default_content.fdi_bloques:
-  title: 'Bloques'
+  title: 'Bloques de contenido'
   route_name: view.view_bloques.page_1
   description: 'Bloques admin list page'
   parent: fdi_default_content.fdi
   weight: 8
 fdi_default_content.fdi_contactos:
-  title: 'Contactos'
+  title: 'Solicitudes de contactos'
   route_name: view.contactos.page_1
   description: 'Contactos admin list page'
   parent: fdi_default_content.fdi
@@ -35,7 +35,7 @@ fdi_default_content.fdi_directorio:
   parent: fdi_default_content.fdi
   weight: 4
 fdi_default_content.fdi_espacios:
-  title: 'Espacios'
+  title: 'Espacios libres de discriminación'
   route_name: view.view_espacios.page_1
   description: 'Espacios admin list page'
   parent: fdi_default_content.fdi
