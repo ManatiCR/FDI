@@ -10,3 +10,6 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'create contacto content'
+  - 'create reporte content'
+  - 'execute graphql requests'
