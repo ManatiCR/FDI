@@ -466,7 +466,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Contactos
+      title: 'Solicitudes de contacto'
       header: {  }
       footer: {  }
       empty: {  }
