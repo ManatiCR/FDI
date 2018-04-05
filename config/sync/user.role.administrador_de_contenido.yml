@@ -29,6 +29,7 @@ permissions:
   - 'edit any directorio content'
   - 'edit any espacio_libre_de_discriminacion content'
   - 'edit any machote content'
+  - 'edit any reporte content'
   - 'edit own recurso_juridico content'
   - 'use text format wysiwyg'
   - 'view all revisions'
