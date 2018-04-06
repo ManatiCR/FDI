@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.reporte.field_codigo_de_seguimient
     - field.field.node.reporte.field_comentarios
     - field.field.node.reporte.field_correo
+    - field.field.node.reporte.field_estado
     - field.field.node.reporte.field_latitud
     - field.field.node.reporte.field_longitud
     - field.field.node.reporte.field_lugar
@@ -58,6 +59,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: email_default
+    region: content
+  field_estado:
+    weight: 131
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_latitud:
     weight: 125

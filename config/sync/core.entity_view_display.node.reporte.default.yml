@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.reporte.field_codigo_de_seguimient
     - field.field.node.reporte.field_comentarios
     - field.field.node.reporte.field_correo
+    - field.field.node.reporte.field_estado
     - field.field.node.reporte.field_latitud
     - field.field.node.reporte.field_longitud
     - field.field.node.reporte.field_lugar
@@ -28,12 +29,12 @@ content:
   body:
     label: above
     type: text_default
-    weight: 101
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: content
   field_categoria_reporte:
-    weight: 102
+    weight: 2
     label: above
     settings:
       link: false
@@ -41,7 +42,7 @@ content:
     type: entity_reference_label
     region: content
   field_codigo_de_seguimient:
-    weight: 109
+    weight: 9
     label: above
     settings:
       link_to_entity: false
@@ -49,7 +50,7 @@ content:
     type: string
     region: content
   field_comentarios:
-    weight: 110
+    weight: 10
     label: above
     settings:
       view_mode: default
@@ -58,14 +59,22 @@ content:
     type: comment_default
     region: content
   field_correo:
-    weight: 108
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
+  field_estado:
+    weight: 1
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_latitud:
-    weight: 105
+    weight: 5
     label: above
     settings:
       thousand_separator: ''
@@ -76,7 +85,7 @@ content:
     type: number_decimal
     region: content
   field_longitud:
-    weight: 106
+    weight: 6
     label: above
     settings:
       thousand_separator: ''
@@ -87,21 +96,21 @@ content:
     type: number_decimal
     region: content
   field_lugar:
-    weight: 104
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_solicita_asesoria_o_apoyo:
-    weight: 107
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_subcategoria_reporte:
-    weight: 103
+    weight: 3
     label: above
     settings:
       link: false
