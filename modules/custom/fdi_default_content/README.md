@@ -43,3 +43,8 @@ subcategorias_de_reporte
 - 89100511-52d6-42f4-8168-3b99e89aad5d Decreto 38999
 - e5934059-0b6c-4f2d-bf49-1e2caffc26f6 Ley Procesal Laboral
 - 1fc3b533-5078-4895-a580-644152e8d33c Código Penal
+estado_de_reporte
+- 9bd9e558-4ba9-4b53-ae2d-24c72c3dc7ac En proceso
+- 2b82c00d-6b6e-4207-9be3-f56a44b2f8eb Resuelto
+- 14b7347e-3de3-4f05-a0d2-7db42f30ec3f Sin procesar
+- 95fb3222-00c4-4cd6-8381-7f230d484ce5 Urgente
