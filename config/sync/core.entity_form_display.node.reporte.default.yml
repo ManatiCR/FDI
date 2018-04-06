@@ -14,9 +14,11 @@ dependencies:
     - field.field.node.reporte.field_lugar
     - field.field.node.reporte.field_solicita_asesoria_o_apoyo
     - field.field.node.reporte.field_subcategoria_reporte
+    - field.field.node.reporte.field_ubicacion
     - node.type.reporte
   module:
     - comment
+    - geolocation
     - text
 id: node.reporte.default
 targetEntityType: node
@@ -99,6 +101,41 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_ubicacion:
+    weight: 132
+    settings:
+      populate_address_field: ''
+      target_address_field: null
+      explicite_actions_address_field: ''
+      default_longitude: null
+      default_latitude: null
+      auto_client_location: ''
+      auto_client_location_marker: ''
+      allow_override_map_settings: 0
+      google_map_settings:
+        type: ROADMAP
+        zoom: '10'
+        minZoom: 0
+        maxZoom: 18
+        rotateControl: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        fullscreenControl: 0
+        scrollwheel: 1
+        disableDoubleClickZoom: 0
+        draggable: 1
+        height: 400px
+        width: 100%
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        style: ''
+        preferScrollingToZooming: 0
+        gestureHandling: auto
+    third_party_settings: {  }
+    type: geolocation_googlegeocoder
     region: content
   title:
     type: string_textfield

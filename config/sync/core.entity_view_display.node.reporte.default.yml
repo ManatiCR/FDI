@@ -15,9 +15,11 @@ dependencies:
     - field.field.node.reporte.field_lugar
     - field.field.node.reporte.field_solicita_asesoria_o_apoyo
     - field.field.node.reporte.field_subcategoria_reporte
+    - field.field.node.reporte.field_ubicacion
     - node.type.reporte
   module:
     - comment
+    - geolocation
     - options
     - text
     - user
@@ -42,7 +44,7 @@ content:
     type: entity_reference_label
     region: content
   field_codigo_de_seguimient:
-    weight: 9
+    weight: 10
     label: above
     settings:
       link_to_entity: false
@@ -50,7 +52,7 @@ content:
     type: string
     region: content
   field_comentarios:
-    weight: 10
+    weight: 11
     label: above
     settings:
       view_mode: default
@@ -59,7 +61,7 @@ content:
     type: comment_default
     region: content
   field_correo:
-    weight: 8
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -74,7 +76,7 @@ content:
     type: entity_reference_label
     region: content
   field_latitud:
-    weight: 5
+    weight: 6
     label: above
     settings:
       thousand_separator: ''
@@ -85,7 +87,7 @@ content:
     type: number_decimal
     region: content
   field_longitud:
-    weight: 6
+    weight: 7
     label: above
     settings:
       thousand_separator: ''
@@ -103,7 +105,7 @@ content:
     type: basic_string
     region: content
   field_solicita_asesoria_o_apoyo:
-    weight: 7
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -116,6 +118,39 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_ubicacion:
+    weight: 5
+    label: above
+    settings:
+      set_marker: '1'
+      title: ''
+      info_text: ''
+      google_map_settings:
+        height: 400px
+        width: 700px
+        type: ROADMAP
+        zoom: '15'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 0
+      common_map: ''
+    third_party_settings: {  }
+    type: geolocation_map
     region: content
 hidden:
   langcode: true
