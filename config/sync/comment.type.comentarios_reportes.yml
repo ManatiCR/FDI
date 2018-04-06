@@ -1,0 +1,8 @@
+uuid: 2e750400-584a-467a-9d06-725be91c3823
+langcode: es
+status: true
+dependencies: {  }
+id: comentarios_reportes
+label: 'Comentarios reportes'
+target_entity_type_id: node
+description: ''
