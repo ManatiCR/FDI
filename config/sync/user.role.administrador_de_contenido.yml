@@ -8,6 +8,7 @@ weight: 2
 is_admin: null
 permissions:
   - 'See admin list pages'
+  - 'access comments'
   - 'access content overview'
   - 'access toolbar'
   - 'administer nodes'
@@ -30,7 +31,10 @@ permissions:
   - 'edit any espacio_libre_de_discriminacion content'
   - 'edit any machote content'
   - 'edit any reporte content'
+  - 'edit own comments'
   - 'edit own recurso_juridico content'
+  - 'post comments'
+  - 'skip comment approval'
   - 'use text format wysiwyg'
   - 'view all revisions'
   - 'view derecho revisions'
