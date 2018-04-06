@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.reporte.body
     - field.field.node.reporte.field_categoria_reporte
     - field.field.node.reporte.field_codigo_de_seguimient
+    - field.field.node.reporte.field_comentarios
     - field.field.node.reporte.field_correo
     - field.field.node.reporte.field_latitud
     - field.field.node.reporte.field_longitud
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.reporte.field_subcategoria_reporte
     - node.type.reporte
   module:
+    - comment
     - text
 id: node.reporte.default
 targetEntityType: node
@@ -42,6 +44,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_comentarios:
+    weight: 130
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_correo:
     weight: 128
