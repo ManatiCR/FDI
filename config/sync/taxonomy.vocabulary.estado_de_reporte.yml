@@ -1,0 +1,9 @@
+uuid: 8961c082-ee71-49a8-acc2-9a96b9286f64
+langcode: en
+status: true
+dependencies: {  }
+name: 'Estado de reporte'
+vid: estado_de_reporte
+description: ''
+hierarchy: 0
+weight: 0
