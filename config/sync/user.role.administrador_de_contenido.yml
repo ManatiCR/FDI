@@ -11,6 +11,7 @@ permissions:
   - 'access comments'
   - 'access content overview'
   - 'access toolbar'
+  - 'administer comments'
   - 'administer nodes'
   - 'change own username'
   - 'create derecho content'
