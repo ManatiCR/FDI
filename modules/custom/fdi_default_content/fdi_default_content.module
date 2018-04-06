@@ -95,3 +95,10 @@ function fdi_default_content_theme($existing, $type, $theme, $path) {
     'fdi_admin_page' => [],
   ];
 }
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function fdi_default_content_theme_registry_alter(&$theme_registry) {
+  $theme_registry['comment']['path'] = drupal_get_path('module', 'fdi_default_content') . '/templates/content/';
+}
