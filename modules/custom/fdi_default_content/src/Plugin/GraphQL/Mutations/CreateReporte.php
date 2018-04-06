@@ -46,8 +46,7 @@ class CreateReporte extends CreateEntityBase {
       'field_codigo_de_seguimient' => $codigo_seguimiento,
       'field_categoria_reporte' => $args['input']['field_categoria_reporte'],
       'field_subcategoria_reporte' => $args['input']['field_subcategoria_reporte'],
-      'field_latitud' => $args['input']['field_latitud'],
-      'field_longitud' => $args['input']['field_longitud'],
+      'field_ubicacion' => ['lat'=>$args['input']['field_ubicacion'][0], 'lng'=>$args['input']['field_ubicacion'][1]],
       'field_solicita_asesoria_o_apoyo' => $args['input']['field_solicita_asesoria_o_apoyo'],
       'field_lugar' => $args['input']['field_lugar'],
     ];
