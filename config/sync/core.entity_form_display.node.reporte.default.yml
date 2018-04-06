@@ -9,8 +9,6 @@ dependencies:
     - field.field.node.reporte.field_comentarios
     - field.field.node.reporte.field_correo
     - field.field.node.reporte.field_estado
-    - field.field.node.reporte.field_latitud
-    - field.field.node.reporte.field_longitud
     - field.field.node.reporte.field_lugar
     - field.field.node.reporte.field_solicita_asesoria_o_apoyo
     - field.field.node.reporte.field_subcategoria_reporte
@@ -67,20 +65,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_latitud:
-    weight: 125
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
-  field_longitud:
-    weight: 126
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
     region: content
   field_lugar:
     weight: 124
