@@ -42,7 +42,7 @@ content:
     type: entity_reference_label
     region: content
   field_codigo_de_seguimient:
-    weight: 10
+    weight: 6
     label: above
     settings:
       link_to_entity: false
@@ -50,7 +50,7 @@ content:
     type: string
     region: content
   field_comentarios:
-    weight: 11
+    weight: 9
     label: above
     settings:
       view_mode: default
@@ -59,7 +59,7 @@ content:
     type: comment_default
     region: content
   field_correo:
-    weight: 9
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -74,14 +74,14 @@ content:
     type: entity_reference_label
     region: content
   field_lugar:
-    weight: 4
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_solicita_asesoria_o_apoyo:
-    weight: 8
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -96,7 +96,7 @@ content:
     type: entity_reference_label
     region: content
   field_ubicacion:
-    weight: 5
+    weight: 8
     label: above
     settings:
       set_marker: '1'
