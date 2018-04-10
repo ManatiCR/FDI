@@ -5,7 +5,7 @@ fdi_default_content.fdi:
   parent: system.admin
   weight: 1
 fdi_default_content.fdi_emails:
-  title: 'Configuración del formulario de contacto'
+  title: 'Configuración formularios direcciones de correos'
   route_name: fdi_default_content.email_config_form
   description: 'Emails config form'
   parent: fdi_default_content.fdi
