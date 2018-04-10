@@ -1,3 +1,9 @@
-email: "correoejemplo1@gmail.com\r\ncorreoejemplo2@gmail.com\r\ncorreoejemplo3@gmail.com"
-message_subject: 'Asunto del correo'
+email: null
+message_subject: 'Asunto del correo Contacto'
 message_intro: 'Intro del correo'
+reporte_message_subject: 'Asunto del correo Reporte'
+contacto_message_subject: 'Asunto del correo Contacto'
+contacto_message_intro: 'Intro del correo contacto'
+contacto_emails: "correocontactoejemplo1@gmail.com\r\ncorreocontactoejemplo2@gmail.com"
+reporte_message_intro: 'Intro del correo reporte'
+reporte_emails: "correoreporteejemplo1@gmail.com\r\ncorreoreporteejemplo2@gmail.com\r\ncorreoreporteejemplo3@gmail.com"
