@@ -36,20 +36,53 @@ class EmailConfigForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('fdi_default_content.emailconfig');
-    $form['message_subject'] = [
+    $form['information'] = array(
+      '#type' => 'vertical_tabs',
+      '#default_tab' => 'contacto',
+    );
+
+    $form['contacto'] = array(
+      '#type' => 'details',
+      '#title' => $this
+        ->t('Formulario De Contacto'),
+      '#group' => 'information',
+    );
+    $form['contacto']['contacto_message_subject'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Asunto del correo'),
-      '#default_value' => $config->get('message_subject'),
+      '#default_value' => $config->get('contacto_message_subject'),
     ];
-    $form['message_intro'] = [
+    $form['contacto']['contacto_message_intro'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Intro del mensaje del correo'),
-      '#default_value' => $config->get('message_intro'),
+      '#default_value' => $config->get('contacto_message_intro'),
     ];
-    $form['email'] = [
+    $form['contacto']['contacto_emails'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Direcciones de correo'),
-      '#default_value' => $config->get('email'),
+      '#default_value' => $config->get('contacto_emails'),
+    ];
+
+    $form['reporte'] = array(
+      '#type' => 'details',
+      '#title' => $this
+        ->t('Reportes'),
+      '#group' => 'information',
+    );
+    $form['reporte']['reporte_message_subject'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Asunto del correo'),
+      '#default_value' => $config->get('reporte_message_subject'),
+    ];
+    $form['reporte']['reporte_message_intro'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Intro del mensaje del correo'),
+      '#default_value' => $config->get('reporte_message_intro'),
+    ];
+    $form['reporte']['reporte_emails'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Direcciones de correo'),
+      '#default_value' => $config->get('reporte_emails'),
     ];
     return parent::buildForm($form, $form_state);
   }
@@ -58,11 +91,17 @@ class EmailConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    $emails = explode(PHP_EOL, $form_state->getValue('email'));
-    foreach ($emails as $email) {
-      $email = preg_replace('/\s+/', '', $email);
-      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $form_state->setErrorByName('email', $this->t('Esta dirección de correo es invalida: ' . $email));
+    $field_mails = [
+      'contacto_emails',
+      'reporte_emails',
+    ];
+    foreach ($field_mails as $field) {
+      $emails = explode(PHP_EOL, $form_state->getValue($field));
+      foreach ($emails as $email) {
+        $email = preg_replace('/\s+/', '', $email);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          $form_state->setErrorByName($field, $this->t('Esta dirección de correo es invalida: ' . $email));
+        }
       }
     }
   }
@@ -74,9 +113,12 @@ class EmailConfigForm extends ConfigFormBase {
     parent::submitForm($form, $form_state);
 
     $this->config('fdi_default_content.emailconfig')
-      ->set('email', $form_state->getValue('email'))
-      ->set('message_subject', $form_state->getValue('message_subject'))
-      ->set('message_intro', $form_state->getValue('message_intro'))
+      ->set('contacto_message_subject', $form_state->getValue('contacto_message_subject'))
+      ->set('contacto_message_intro', $form_state->getValue('contacto_message_intro'))
+      ->set('contacto_emails', $form_state->getValue('contacto_emails'))
+      ->set('reporte_message_subject', $form_state->getValue('reporte_message_subject'))
+      ->set('reporte_message_intro', $form_state->getValue('reporte_message_intro'))
+      ->set('reporte_emails', $form_state->getValue('reporte_emails'))
       ->save();
   }
 

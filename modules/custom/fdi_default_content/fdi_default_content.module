@@ -5,6 +5,9 @@
  * Defines sample default content for test purposes.
  */
 
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Mail\MailFormatHelper;
+
 /**
  * Implements hook_form_alter().
  */
@@ -53,7 +56,22 @@ function fdi_default_content_mail($key, &$message, $params) {
       $message['body']['email'] = "Correo electrónico:\n" . $params['entity']->get('field_correo')->getValue()[0]['value'];
       $message['body']['telefono'] = "Teléfono:\n" . $params['entity']->get('field_telefono')->getValue()[0]['value'];
       $message['body']['codigo'] = "Código de seguimiento:\n" . $params['entity']->get('field_codigo_de_seguimient')->getValue()[0]['value'];
-      $message['body']['mensaje'] = "Mensaje:\n" . $params['entity']->get('body')->getValue()[0]['value'];
+      $message['body']['mensaje'] = MailFormatHelper::htmlToText("Mensaje:\n" . $params['entity']->get('body')->getValue()[0]['value']);
+      break;
+
+    case 'insert_reporte_node':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = $params['message_subject'];
+      $message['body']['message_intro'] = $params['message_intro'];
+      $message['body']['link'] = "Enlace al reporte:\n" . $params['link'];
+      $message['body']['field_codigo_de_seguimient'] = "Código de seguimiento:\n" . $params['entity']->get('field_codigo_de_seguimient')->getValue()[0]['value'];
+      $message['body']['nombre'] = "Nombre:\n" . $params['entity']->get('title')->getValue()[0]['value'];
+      $message['body']['email'] = "Correo electrónico:\n" . $params['entity']->get('field_correo')->getValue()[0]['value'];
+      $message['body']['categories'] = "Cateogías:\n" . $params['categories'];
+      $message['body']['sub_categories'] = "Subcateogías:\n" . $params['sub_categories'];
+      $message['body']['lugar'] = "Lugar:\n" . $params['entity']->get('field_lugar')->getValue()[0]['value'];
+      $message['body']['field_solicita_asesoria_o_apoyo'] = "Solicita apoyo:\n" . $params['entity']->get('field_solicita_asesoria_o_apoyo')->getValue()[0]['value'];
+      $message['body']['mensaje'] = "Reporte:\n" . MailFormatHelper::htmlToText($params['entity']->get('body')->getValue()[0]['value']);
       break;
   }
 }
@@ -62,20 +80,41 @@ function fdi_default_content_mail($key, &$message, $params) {
  * Implements hook_entity_insert().
  */
 function fdi_default_content_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
-  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'contacto') {
-
-    $email_direccions = \Drupal::config('fdi_default_content.emailconfig')->get('email');
+  $entities_bundles = [
+    'contacto',
+    'reporte',
+  ];
+  if ($entity->getEntityTypeId() === 'node' && in_array($entity->bundle(), $entities_bundles)) {
+    if ($entity->bundle() === 'contacto') {
+      $params['message_intro'] = \Drupal::config('fdi_default_content.emailconfig')->get('contacto_message_intro');
+      $params['message_subject'] = \Drupal::config('fdi_default_content.emailconfig')->get('contacto_message_subject');
+      $email_direccions = \Drupal::config('fdi_default_content.emailconfig')->get('contacto_emails');
+      $key = 'insert_contacto_node';
+    }
+    else {
+      $params['message_intro'] = \Drupal::config('fdi_default_content.emailconfig')->get('reporte_message_intro');
+      $params['message_subject'] = \Drupal::config('fdi_default_content.emailconfig')->get('reporte_message_subject');
+      $email_direccions = \Drupal::config('fdi_default_content.emailconfig')->get('reporte_emails');
+      global $base_url;
+      $params['link'] = $base_url . '/' . $entity->toLink()->getUrl()->getInternalPath();
+      $categories = [];
+      $sub_categories = [];
+      foreach ($entity->get('field_subcategoria_reporte')->getValue() as $term) {
+        $sub_categories[] = Term::load($term['target_id'])->label();
+      }
+      foreach ($entity->get('field_categoria_reporte')->getValue() as $term) {
+        $categories[] = Term::load($term['target_id'])->label();
+      }
+      $params['categories'] = implode(', ', $categories);
+      $params['sub_categories'] = implode(', ', $sub_categories);
+      $key = 'insert_reporte_node';
+    }
     $email_direccions = preg_replace('/\s+/', ',', $email_direccions);
-
     $mail_manager = \Drupal::service('plugin.manager.mail');
-
     $module = 'fdi_default_content';
-    $key = 'insert_contacto_node';
     $to = $email_direccions;
     $send = TRUE;
     $params['entity'] = $entity;
-    $params['message_intro'] = \Drupal::config('fdi_default_content.emailconfig')->get('message_intro');
-    $params['message_subject'] = \Drupal::config('fdi_default_content.emailconfig')->get('message_subject');
     $result = $mail_manager->mail($module, $key, $to, 'es', $params, NULL, $send);
     if ($result['result'] !== TRUE) {
       $message = t('There was a problem sending your email notification to @email for creating node @id.', array('@email' => $to, '@id' => $entity->id()));
