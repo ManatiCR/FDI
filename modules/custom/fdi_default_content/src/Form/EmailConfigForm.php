@@ -66,7 +66,7 @@ class EmailConfigForm extends ConfigFormBase {
     $form['reporte'] = array(
       '#type' => 'details',
       '#title' => $this
-        ->t('Formulario De Reportes'),
+        ->t('Reportes'),
       '#group' => 'information',
     );
     $form['reporte']['reporte_message_subject'] = [

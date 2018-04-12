@@ -99,7 +99,6 @@ function fdi_default_content_entity_insert(Drupal\Core\Entity\EntityInterface $e
       $params['link'] = $base_url . '/' . $entity->toLink()->getUrl()->getInternalPath();
       $categories = [];
       $sub_categories = [];
-      // dpm($entity->get('field_subcategoria_reporte')->getValue());
       foreach ($entity->get('field_subcategoria_reporte')->getValue() as $term) {
         $sub_categories[] = Term::load($term['target_id'])->label();
       }
@@ -116,7 +115,6 @@ function fdi_default_content_entity_insert(Drupal\Core\Entity\EntityInterface $e
     $to = $email_direccions;
     $send = TRUE;
     $params['entity'] = $entity;
-    // Term::load($taxonomy_term_tid);
     $result = $mail_manager->mail($module, $key, $to, 'es', $params, NULL, $send);
     if ($result['result'] !== TRUE) {
       $message = t('There was a problem sending your email notification to @email for creating node @id.', array('@email' => $to, '@id' => $entity->id()));
