@@ -1,0 +1,21 @@
+uuid: 51e6f847-41a2-406f-b672-7d69f827d3fb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ubicacion
+    - node.type.reporte
+  module:
+    - geolocation
+id: node.reporte.field_ubicacion
+field_name: field_ubicacion
+entity_type: node
+bundle: reporte
+label: Ubicación
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

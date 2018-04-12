@@ -1,14 +1,16 @@
-uuid: 3d0573d3-27bf-4947-a944-3a62271d475b
+uuid: 06b28a8e-ff4a-4b09-ab1b-6dfd07ec70a6
 langcode: es
 status: true
 dependencies:
   module:
     - node
-id: node.field_longitud
-field_name: field_longitud
+    - taxonomy
+id: node.field_estado
+field_name: field_estado
 entity_type: node
-type: float
-settings: {  }
+type: entity_reference
+settings:
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

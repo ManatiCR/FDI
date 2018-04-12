@@ -1,0 +1,28 @@
+uuid: 4cfaa28e-0ba4-41ab-a0ca-d4bba306e4bc
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comentarios_reportes
+    - field.field.comment.comentarios_reportes.comment_body
+  module:
+    - text
+id: comment.comentarios_reportes.default
+targetEntityType: comment
+bundle: comentarios_reportes
+mode: default
+content:
+  comment_body:
+    type: text_default
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

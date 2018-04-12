@@ -1,0 +1,33 @@
+uuid: 0938db2d-3e6b-42d0-9a2d-74034b9ccdda
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estado
+    - node.type.reporte
+    - taxonomy.vocabulary.estado_de_reporte
+  content:
+    - 'taxonomy_term:estado_de_reporte:14b7347e-3de3-4f05-a0d2-7db42f30ec3f'
+id: node.reporte.field_estado
+field_name: field_estado
+entity_type: node
+bundle: reporte
+label: Estado
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 14b7347e-3de3-4f05-a0d2-7db42f30ec3f
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      estado_de_reporte: estado_de_reporte
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
