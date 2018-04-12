@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/es\/taxonomy\/term\/21?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/subcategorias_de_reporte"
+        }
+    },
+    "tid": [
+        {
+            "value": 21
+        }
+    ],
+    "uuid": [
+        {
+            "value": "1fc3b533-5078-4895-a580-644152e8d33c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es",
+            "lang": "es"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "subcategorias_de_reporte"
+        }
+    ],
+    "name": [
+        {
+            "value": "C\u00f3digo Penal",
+            "lang": "es"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-04-06T16:23:47+00:00",
+            "lang": "es",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "es"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "es",
+            "lang": "es"
+        }
+    ]
+}

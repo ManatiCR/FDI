@@ -18,7 +18,8 @@ Nodes:
 - db4cd13a-75bd-42e5-8fb4-bca697058614 Homepage: Derechos
 - ac78cabb-322d-4729-9ac9-b083934c0a95 Homepage: Reportá
 
-Taxonomy terms
+Taxonomy terms:
+categorias_recursos_juridicos
 - 1c6c5a18-4950-4ada-9231-3cd7d63bf4f2 Bases de datos de ONGs y otros contactos de interés
 - 8494583c-3d4b-494c-895c-62ec86152549 Declaratorias de espacios libres de discriminación
 - 863e438f-f6a7-4008-8fee-3a6f3f8205f7 Guías, estudios e investigaciones GLBTI
@@ -31,4 +32,19 @@ Taxonomy terms
 - f66a54fb-5f7d-4a05-bf01-ab860f99c38c Otros documentos
 - aff033c8-e8db-471e-b408-944d700a9433 Proyectos de ley
 - eb9af8ad-4b33-4800-92c0-5ef691e65bc5 Políticas nacionales
-- b9a3e186-30e7-49c2-8d40-71815fdfd42e Otros instrumentos internacionales 
+- b9a3e186-30e7-49c2-8d40-71815fdfd42e Otros instrumentos internacionales
+categorias_de_reporte
+- 8ef7f597-9d76-4ed7-9bc2-cf2ca4e51882 Agresión física
+- 1eb0bb09-c7c3-4840-95a4-89b0e54a8eac Daño material
+- 12ba6533-0535-4298-b6a1-5f52129ee72c Hostigamiento Sexual
+- abbc8c3d-ba6e-4cd5-8598-0bc22b214ba5 Intento de Agresion
+- 5da67208-0fc9-42dd-9a32-bda22d121f84 Verbal
+subcategorias_de_reporte
+- 89100511-52d6-42f4-8168-3b99e89aad5d Decreto 38999
+- e5934059-0b6c-4f2d-bf49-1e2caffc26f6 Ley Procesal Laboral
+- 1fc3b533-5078-4895-a580-644152e8d33c Código Penal
+estado_de_reporte
+- 9bd9e558-4ba9-4b53-ae2d-24c72c3dc7ac En proceso
+- 2b82c00d-6b6e-4207-9be3-f56a44b2f8eb Resuelto
+- 14b7347e-3de3-4f05-a0d2-7db42f30ec3f Sin procesar
+- 95fb3222-00c4-4cd6-8381-7f230d484ce5 Urgente

@@ -29,20 +29,16 @@ use Drupal\graphql\Plugin\GraphQL\InputTypes\InputTypePluginBase;
  *        "type" = "[Int]",
  *        "nullable" = "TRUE"
  *     },
+ *     "field_ubicacion" = {
+ *        "type" = "[Float]",
+ *        "nullable" = "TRUE"
+ *     },
  *     "body" = {
  *        "type" = "String",
  *        "nullable" = "TRUE"
  *     },
  *     "field_codigo_de_seguimient" = {
  *        "type" = "String",
- *        "nullable" = "TRUE"
- *     },
- *     "field_latitud" = {
- *        "type" = "Float",
- *        "nullable" = "TRUE"
- *     },
- *     "field_longitud" = {
- *        "type" = "Float",
  *        "nullable" = "TRUE"
  *     },
  *     "field_lugar" = {

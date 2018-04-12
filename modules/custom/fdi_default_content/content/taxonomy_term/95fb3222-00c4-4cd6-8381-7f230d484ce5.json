@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/es\/taxonomy\/term\/25?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/estado_de_reporte"
+        }
+    },
+    "tid": [
+        {
+            "value": 25
+        }
+    ],
+    "uuid": [
+        {
+            "value": "95fb3222-00c4-4cd6-8381-7f230d484ce5"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es",
+            "lang": "es"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "estado_de_reporte"
+        }
+    ],
+    "name": [
+        {
+            "value": "Urgente",
+            "lang": "es"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-04-06T19:18:12+00:00",
+            "lang": "es",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "es"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "es",
+            "lang": "es"
+        }
+    ]
+}

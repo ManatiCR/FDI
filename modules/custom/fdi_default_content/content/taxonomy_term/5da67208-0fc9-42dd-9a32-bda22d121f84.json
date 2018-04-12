@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/es\/taxonomy\/term\/18?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/categorias_de_reporte"
+        }
+    },
+    "tid": [
+        {
+            "value": 18
+        }
+    ],
+    "uuid": [
+        {
+            "value": "5da67208-0fc9-42dd-9a32-bda22d121f84"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es",
+            "lang": "es"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "categorias_de_reporte"
+        }
+    ],
+    "name": [
+        {
+            "value": "Verbal",
+            "lang": "es"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-04-05T21:39:27+00:00",
+            "lang": "es",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "es"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "es",
+            "lang": "es"
+        }
+    ]
+}

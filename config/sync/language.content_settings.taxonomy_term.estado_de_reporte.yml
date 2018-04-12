@@ -1,0 +1,11 @@
+uuid: 4da16e54-1aa3-4015-8533-2cb20f3c22a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.estado_de_reporte
+id: taxonomy_term.estado_de_reporte
+target_entity_type_id: taxonomy_term
+target_bundle: estado_de_reporte
+default_langcode: site_default
+language_alterable: false

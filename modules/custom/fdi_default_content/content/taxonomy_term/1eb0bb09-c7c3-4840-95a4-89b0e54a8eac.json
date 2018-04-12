@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/es\/taxonomy\/term\/15?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/categorias_de_reporte"
+        }
+    },
+    "tid": [
+        {
+            "value": 15
+        }
+    ],
+    "uuid": [
+        {
+            "value": "1eb0bb09-c7c3-4840-95a4-89b0e54a8eac"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es",
+            "lang": "es"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "categorias_de_reporte"
+        }
+    ],
+    "name": [
+        {
+            "value": "Da\u00f1o material",
+            "lang": "es"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-04-05T21:39:05+00:00",
+            "lang": "es",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "es"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "es",
+            "lang": "es"
+        }
+    ]
+}
