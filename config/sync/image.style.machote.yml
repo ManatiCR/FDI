@@ -1,0 +1,23 @@
+uuid: bffe32d2-e256-4765-a022-84710459a124
+langcode: es
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: machote
+label: Machote
+effects:
+  b498d6d3-bd51-4fad-a69d-9b7210d3e08e:
+    uuid: b498d6d3-bd51-4fad-a69d-9b7210d3e08e
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 25
+  08f4afbf-2d69-471b-a013-f2ce900527fc:
+    uuid: 08f4afbf-2d69-471b-a013-f2ce900527fc
+    id: image_scale
+    weight: 2
+    data:
+      width: 440
+      height: 280
+      upscale: true
