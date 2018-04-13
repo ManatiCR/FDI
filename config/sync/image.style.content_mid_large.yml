@@ -1,0 +1,23 @@
+uuid: cf644a7b-e96b-43ed-9615-613fcf9bbbb7
+langcode: es
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: content_mid_large
+label: 'Content mid large'
+effects:
+  ffa07de1-6920-45c8-a56d-a43af8f9572f:
+    uuid: ffa07de1-6920-45c8-a56d-a43af8f9572f
+    id: image_scale
+    weight: 1
+    data:
+      width: 1520
+      height: 700
+      upscale: true
+  d507831a-8966-4552-bd2b-4e9cc786dee1:
+    uuid: d507831a-8966-4552-bd2b-4e9cc786dee1
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 25
