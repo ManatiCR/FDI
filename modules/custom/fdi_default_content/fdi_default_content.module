@@ -67,8 +67,8 @@ function fdi_default_content_mail($key, &$message, $params) {
       $message['body']['field_codigo_de_seguimient'] = "Código de seguimiento:\n" . $params['entity']->get('field_codigo_de_seguimient')->getValue()[0]['value'];
       $message['body']['nombre'] = "Nombre:\n" . $params['entity']->get('title')->getValue()[0]['value'];
       $message['body']['email'] = "Correo electrónico:\n" . $params['entity']->get('field_correo')->getValue()[0]['value'];
-      $message['body']['categories'] = "Cateogías:\n" . $params['categories'];
-      $message['body']['sub_categories'] = "Subcateogías:\n" . $params['sub_categories'];
+      $message['body']['categories'] = "Categorías:\n" . $params['categories'];
+      $message['body']['sub_categories'] = "Subcategorías:\n" . $params['sub_categories'];
       $message['body']['lugar'] = "Lugar:\n" . $params['entity']->get('field_lugar')->getValue()[0]['value'];
       $message['body']['field_solicita_asesoria_o_apoyo'] = "Solicita apoyo:\n" . $params['entity']->get('field_solicita_asesoria_o_apoyo')->getValue()[0]['value'];
       $message['body']['mensaje'] = "Reporte:\n" . MailFormatHelper::htmlToText($params['entity']->get('body')->getValue()[0]['value']);
