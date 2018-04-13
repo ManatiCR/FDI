@@ -58,3 +58,9 @@ fdi_default_content.fdi_reportes:
   description: 'Reportes admin list page'
   parent: fdi_default_content.fdi
   weight: 1
+fdi_default_content.fdi_taxonomies:
+  title: 'Edición de categorías'
+  route_name: entity.taxonomy_vocabulary.collection
+  description: 'Admin taxonomy terms'
+  parent: fdi_default_content.fdi
+  weight: 9
