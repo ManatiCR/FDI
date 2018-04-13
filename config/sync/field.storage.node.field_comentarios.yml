@@ -1,15 +1,17 @@
-uuid: d5a2ba4b-e4b0-45b8-ba7d-bcb6ff4598ee
+uuid: 70b547bd-e29a-4965-ba44-975b919ac881
 langcode: es
 status: true
 dependencies:
   module:
+    - comment
     - node
-id: node.field_latitud
-field_name: field_latitud
+id: node.field_comentarios
+field_name: field_comentarios
 entity_type: node
-type: float
-settings: {  }
-module: core
+type: comment
+settings:
+  comment_type: comentarios_reportes
+module: comment
 locked: false
 cardinality: 1
 translatable: true

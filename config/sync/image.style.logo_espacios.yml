@@ -1,0 +1,23 @@
+uuid: 2171c1d2-ae98-4f21-8add-db4e68afd613
+langcode: es
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: logo_espacios
+label: 'Logo espacios'
+effects:
+  b639cd86-4721-4332-95e5-40cc3063b58c:
+    uuid: b639cd86-4721-4332-95e5-40cc3063b58c
+    id: image_scale
+    weight: 1
+    data:
+      width: 290
+      height: null
+      upscale: true
+  40a8ef7f-3c28-4cca-9f5f-71ec69322325:
+    uuid: 40a8ef7f-3c28-4cca-9f5f-71ec69322325
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 25

@@ -5,7 +5,7 @@ fdi_default_content.fdi:
   parent: system.admin
   weight: 1
 fdi_default_content.fdi_emails:
-  title: 'Configuración del formulario de contacto'
+  title: 'Configuración de correo electrónico'
   route_name: fdi_default_content.email_config_form
   description: 'Emails config form'
   parent: fdi_default_content.fdi
@@ -58,3 +58,9 @@ fdi_default_content.fdi_reportes:
   description: 'Reportes admin list page'
   parent: fdi_default_content.fdi
   weight: 1
+fdi_default_content.fdi_taxonomies:
+  title: 'Edición de categorías'
+  route_name: entity.taxonomy_vocabulary.collection
+  description: 'Admin taxonomy terms'
+  parent: fdi_default_content.fdi
+  weight: 9

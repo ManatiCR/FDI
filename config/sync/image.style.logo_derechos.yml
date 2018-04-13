@@ -1,0 +1,23 @@
+uuid: 4dcf3531-e0aa-4b9e-9044-19bfe0d23f1b
+langcode: es
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: logo_derechos
+label: 'logo derechos'
+effects:
+  9f2ff746-da0f-4065-ad0d-1d3163e30638:
+    uuid: 9f2ff746-da0f-4065-ad0d-1d3163e30638
+    id: image_scale
+    weight: 1
+    data:
+      width: 230
+      height: null
+      upscale: true
+  1a1600f3-2adb-4c17-9967-bce696d6219c:
+    uuid: 1a1600f3-2adb-4c17-9967-bce696d6219c
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 25
