@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.machote.body
     - field.field.node.machote.field_como_utilizarlo
+    - field.field.node.machote.field_imagen
     - field.field.node.machote.field_machote
     - node.type.machote
   module:
     - file
+    - image
     - text
     - user
 id: node.machote.default
@@ -29,6 +31,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_imagen:
+    weight: 104
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_machote:
     weight: 103
