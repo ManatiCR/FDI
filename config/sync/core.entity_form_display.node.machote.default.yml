@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.node.machote.body
     - field.field.node.machote.field_como_utilizarlo
+    - field.field.node.machote.field_imagen
     - field.field.node.machote.field_machote
+    - image.style.thumbnail
     - node.type.machote
   module:
     - file
+    - image
     - text
 id: node.machote.default
 targetEntityType: node
@@ -33,6 +36,14 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  field_imagen:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_machote:
     weight: 4
     settings:
@@ -42,7 +53,7 @@ content:
     region: content
   title:
     type: string_textfield
-    weight: 1
+    weight: 0
     region: content
     settings:
       size: 60
