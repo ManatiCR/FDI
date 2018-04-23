@@ -1,0 +1,22 @@
+uuid: 4d5d2c21-536d-4f58-85b8-11b95cc944ea
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.recurso_juridico
+  module:
+    - text
+id: node.recurso_juridico.body
+field_name: body
+entity_type: node
+bundle: recurso_juridico
+label: Descripción
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
