@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.node.recurso_juridico.body
     - field.field.node.recurso_juridico.field_categoria_recurso_juridico
     - field.field.node.recurso_juridico.field_enlace
     - field.field.node.recurso_juridico.field_vigencia
@@ -10,11 +11,21 @@ dependencies:
   module:
     - datetime
     - link
+    - text
 id: node.recurso_juridico.default
 targetEntityType: node
 bundle: recurso_juridico
 mode: default
 content:
+  body:
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   field_categoria_recurso_juridico:
     weight: 2
     settings: {  }
