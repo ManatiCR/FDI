@@ -13,11 +13,10 @@ effects:
     weight: 2
     data:
       quality: 25
-  08f4afbf-2d69-471b-a013-f2ce900527fc:
-    uuid: 08f4afbf-2d69-471b-a013-f2ce900527fc
-    id: image_scale
-    weight: 2
+  2306fff6-f4ef-4908-9e4f-9ff675d42e39:
+    uuid: 2306fff6-f4ef-4908-9e4f-9ff675d42e39
+    id: image_scale_and_crop
+    weight: 3
     data:
       width: 440
       height: 280
-      upscale: true

@@ -7,17 +7,16 @@ dependencies:
 name: content_full_small
 label: 'Content full small'
 effects:
-  d549d4bf-6b1a-4aa2-8314-86977dc97471:
-    uuid: d549d4bf-6b1a-4aa2-8314-86977dc97471
-    id: image_scale
-    weight: 1
-    data:
-      width: 750
-      height: 840
-      upscale: true
   b22333a2-4146-42d8-ba55-dbd54a590122:
     uuid: b22333a2-4146-42d8-ba55-dbd54a590122
     id: image_style_quality
     weight: 2
     data:
       quality: 25
+  fee05222-68ac-4261-adc9-88756018e79e:
+    uuid: fee05222-68ac-4261-adc9-88756018e79e
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 750
+      height: 840
