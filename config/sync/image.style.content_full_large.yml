@@ -7,17 +7,16 @@ dependencies:
 name: content_full_large
 label: 'Content full large'
 effects:
-  ac975350-5082-4f6c-92ce-d2478b01c5c3:
-    uuid: ac975350-5082-4f6c-92ce-d2478b01c5c3
-    id: image_scale
-    weight: 1
-    data:
-      width: 2560
-      height: 840
-      upscale: true
   8937215c-4ad1-4661-895a-59d0fac8f8ae:
     uuid: 8937215c-4ad1-4661-895a-59d0fac8f8ae
     id: image_style_quality
     weight: 2
     data:
       quality: 25
+  7459be68-965c-4ecf-839f-096eccb71001:
+    uuid: 7459be68-965c-4ecf-839f-096eccb71001
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 2560
+      height: 840
