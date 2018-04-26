@@ -26,6 +26,16 @@ ini_set('session.gc_divisor', 100);
 ini_set('session.gc_maxlifetime', 200000);
 ini_set('session.cookie_lifetime', 2000000);
 
+// Environment specific config.
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev') {
+    $config['config_split.config_split.dev']['status'] = TRUE;
+  }
+}
+else {
+  // Local environment.
+  $config['config_split.config_split.dev']['status'] = TRUE;
+}
 /**
  * Include local configuration.
  *

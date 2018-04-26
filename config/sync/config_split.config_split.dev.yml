@@ -1,0 +1,17 @@
+uuid: 65b81608-060f-4e11-9fff-0c4dc5023b8f
+langcode: es
+status: false
+dependencies: {  }
+id: dev
+label: dev
+folder: sites/default/config/dev
+module:
+  devel: 0
+theme: {  }
+blacklist: {  }
+graylist:
+  - smtp.settings
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
+
