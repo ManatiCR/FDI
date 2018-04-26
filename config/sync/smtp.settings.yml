@@ -1,10 +1,10 @@
 smtp_on: true
-smtp_host: 'mailhog:1025'
+smtp_host: mail.fdi.cr
 smtp_hostbackup: ''
-smtp_port: '32786'
+smtp_port: '25'
 smtp_protocol: standard
-smtp_username: ''
-smtp_password: ''
+smtp_username: no-reply@fdi.cr
+smtp_password: no-contestar2018
 smtp_from: ''
 smtp_fromname: ''
 smtp_client_hostname: ''
@@ -16,3 +16,4 @@ prev_mail_system: php_mail
 _core:
   default_config_hash: WEa5Ex_IeAcm6Bm0hmQ4vU_nDwJDB8hW-vxT1qpGIbM
 langcode: es
+

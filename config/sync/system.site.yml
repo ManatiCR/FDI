@@ -1,6 +1,6 @@
 uuid: c3bd695e-f9ea-47ea-8881-0e473dd8644b
-name: fdi
-mail: admin@example.com
+name: 'No mas discriminacion FDI'
+mail: no-reply@fdi.cr
 slogan: ''
 page:
   403: ''
@@ -12,3 +12,4 @@ langcode: en
 default_langcode: es
 _core:
   default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+
