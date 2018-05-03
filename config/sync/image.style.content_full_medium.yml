@@ -1,0 +1,22 @@
+uuid: 0b55baf9-9a49-4871-95ad-533266e6b0fd
+langcode: es
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: content_full_medium
+label: 'Content full medium'
+effects:
+  b6e296a1-94eb-46b8-a4ed-db62259c9b78:
+    uuid: b6e296a1-94eb-46b8-a4ed-db62259c9b78
+    id: image_style_quality
+    weight: 1
+    data:
+      quality: 25
+  b683faf9-de5f-4bca-a763-5fa2003352d4:
+    uuid: b683faf9-de5f-4bca-a763-5fa2003352d4
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 2000
+      height: 1500

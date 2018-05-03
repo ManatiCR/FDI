@@ -1,0 +1,22 @@
+uuid: 3b99ba18-9805-47df-8296-6939498f4e0f
+langcode: es
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: content_mid_medium
+label: 'Content mid medium'
+effects:
+  4d4f8c61-ccd0-4bec-89fe-a0833f275dd2:
+    uuid: 4d4f8c61-ccd0-4bec-89fe-a0833f275dd2
+    id: image_style_quality
+    weight: 1
+    data:
+      quality: 25
+  0f6488bc-6247-4544-baa6-1683403a9c0f:
+    uuid: 0f6488bc-6247-4544-baa6-1683403a9c0f
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1520
+      height: 1700
