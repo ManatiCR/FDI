@@ -46,7 +46,6 @@ function fdi_default_content_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_mail().
  */
 function fdi_default_content_mail($key, &$message, $params) {
-
   switch ($key) {
     case 'insert_contacto_node':
       $message['from'] = \Drupal::config('system.site')->get('mail');
@@ -54,8 +53,37 @@ function fdi_default_content_mail($key, &$message, $params) {
       $message['body']['message_intro'] = $params['message_intro'];
       $message['body']['nombre'] = "Nombre:\n" . $params['entity']->get('title')->getValue()[0]['value'];
       $message['body']['email'] = "Correo electrónico:\n" . $params['entity']->get('field_correo')->getValue()[0]['value'];
-      $message['body']['telefono'] = "Teléfono:\n" . $params['entity']->get('field_telefono')->getValue()[0]['value'];
-      $message['body']['codigo'] = "Código de seguimiento:\n" . $params['entity']->get('field_codigo_de_seguimient')->getValue()[0]['value'];
+      // Field telefono.
+      if ($params['entity']->get('field_telefono')->getValue()[0]['value']) {
+        $message['body']['telefono'] = "Teléfono:\n" . $params['entity']->get('field_telefono')->getValue()[0]['value'];
+      }
+      // Field motivo de contacto.
+      if ($params['entity']->get('field_motivo_de_contacto')->getValue()[0]['value']) {
+        $message['body']['motivo_list'] = "Motivo del contacto:\n" . $params['entity']->get('field_motivo_de_contacto')
+          ->getFieldDefinition()
+          ->getFieldStorageDefinition()
+          ->getOptionsProvider(
+            'value',
+            $params['entity']->get('field_motivo_de_contacto')
+            ->getEntity())
+            ->getPossibleOptions()[$params['entity']->get('field_motivo_de_contacto')->value];
+      }
+      // Field nombre del sitio.
+      if ($params['entity']->get('field_nombre_del_sitio')->getValue()[0]['value']) {
+        $message['body']['nombre_del_sitio'] = "Nombre del sitio:\n" . $params['entity']->get('field_nombre_del_sitio')->getValue()[0]['value'];
+      }
+      // Field sitio web.
+      if ($params['entity']->get('field_sitio_web')->getValue()[0]['uri']) {
+        $message['body']['sitio_web'] = "Sitio Web:\n" . $params['entity']->get('field_sitio_web')->getValue()[0]['uri'];
+      }
+      // Field codigo.
+      if ($params['entity']->get('field_codigo_de_seguimient')->getValue()[0]['value']) {
+        $message['body']['codigo'] = "Código de seguimiento:\n" . $params['entity']->get('field_codigo_de_seguimient')->getValue()[0]['value'];
+      }
+      // Field otro motivo.
+      if ($params['entity']->get('field_otro_motivo')->getValue()[0]['value']) {
+        $message['body']['motivo'] = "Motivo:\n" . $params['entity']->get('field_otro_motivo')->getValue()[0]['value'];
+      }
       $message['body']['mensaje'] = MailFormatHelper::htmlToText("Mensaje:\n" . $params['entity']->get('body')->getValue()[0]['value']);
       break;
 
