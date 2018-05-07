@@ -1,0 +1,19 @@
+uuid: 8e5107b0-f30a-4817-b2fc-f2b75faf7cce
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_del_sitio
+    - node.type.contacto
+id: node.contacto.field_nombre_del_sitio
+field_name: field_nombre_del_sitio
+entity_type: node
+bundle: contacto
+label: 'Nombre del sitio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

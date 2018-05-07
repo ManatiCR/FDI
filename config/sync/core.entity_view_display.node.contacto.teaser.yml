@@ -26,4 +26,10 @@ content:
     weight: 100
     region: content
 hidden:
+  field_codigo_de_seguimient: true
+  field_correo: true
+  field_motivo_de_contacto: true
+  field_nombre_del_sitio: true
+  field_otro_motivo: true
+  field_telefono: true
   langcode: true

@@ -6,9 +6,15 @@ dependencies:
     - field.field.node.contacto.body
     - field.field.node.contacto.field_codigo_de_seguimient
     - field.field.node.contacto.field_correo
+    - field.field.node.contacto.field_motivo_de_contacto
+    - field.field.node.contacto.field_nombre_del_sitio
+    - field.field.node.contacto.field_otro_motivo
+    - field.field.node.contacto.field_sitio_web
     - field.field.node.contacto.field_telefono
     - node.type.contacto
   module:
+    - link
+    - options
     - text
     - user
 id: node.contacto.default
@@ -37,6 +43,41 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_motivo_de_contacto:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_nombre_del_sitio:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_otro_motivo:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sitio_web:
+    weight: 9
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_telefono:
     weight: 1

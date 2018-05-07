@@ -1,0 +1,30 @@
+uuid: f60e2a71-cde3-47eb-abb0-1429dfb779d5
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_motivo_de_contacto
+field_name: field_motivo_de_contacto
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: recomendar_espacio
+      label: 'Recomendar sitio libre de discriminación'
+    -
+      value: tengo_codigo
+      label: 'Tengo código de seguimiento'
+    -
+      value: otro
+      label: Otro
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
