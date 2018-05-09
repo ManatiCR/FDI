@@ -6,9 +6,14 @@ dependencies:
     - field.field.node.contacto.body
     - field.field.node.contacto.field_codigo_de_seguimient
     - field.field.node.contacto.field_correo
+    - field.field.node.contacto.field_motivo_de_contacto
+    - field.field.node.contacto.field_nombre_del_sitio
+    - field.field.node.contacto.field_otro_motivo
+    - field.field.node.contacto.field_sitio_web
     - field.field.node.contacto.field_telefono
     - node.type.contacto
   module:
+    - link
     - text
 id: node.contacto.default
 targetEntityType: node
@@ -17,7 +22,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 1
     settings:
       rows: 9
       summary_rows: 3
@@ -25,7 +30,7 @@ content:
     third_party_settings: {  }
     region: content
   field_codigo_de_seguimient:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -33,15 +38,45 @@ content:
     type: string_textfield
     region: content
   field_correo:
-    weight: 3
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
     region: content
+  field_motivo_de_contacto:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_nombre_del_sitio:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_otro_motivo:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sitio_web:
+    type: link_default
+    weight: 8
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_telefono:
-    weight: 4
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -50,7 +85,7 @@ content:
     region: content
   title:
     type: string_textfield
-    weight: 1
+    weight: 0
     region: content
     settings:
       size: 60

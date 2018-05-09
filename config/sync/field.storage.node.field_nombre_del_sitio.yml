@@ -1,0 +1,20 @@
+uuid: 72802846-a6e0-4c9f-ad7e-62af75a4e486
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_nombre_del_sitio
+field_name: field_nombre_del_sitio
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
