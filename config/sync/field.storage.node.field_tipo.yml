@@ -38,6 +38,9 @@ settings:
     -
       value: contacto
       label: Contacto
+    -
+      value: espacios
+      label: Espacios
   allowed_values_function: ''
 module: options
 locked: false
