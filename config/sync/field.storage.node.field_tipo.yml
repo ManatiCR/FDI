@@ -41,6 +41,9 @@ settings:
     -
       value: espacios
       label: Espacios
+    -
+      value: recursos_juridicos
+      label: 'Recursos jurídicos'
   allowed_values_function: ''
 module: options
 locked: false
