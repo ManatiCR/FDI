@@ -1,12 +1,12 @@
-uuid: 1ad548f1-265e-4142-958d-b469852c7335
+uuid: 1287f6c8-fc46-46b5-856a-a5a294dc40e4
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field__como_utilizarlo_
+    - field.storage.node.field_como_utilizarlo
     - node.type.machote
-id: node.machote.field__como_utilizarlo_
-field_name: field__como_utilizarlo_
+id: node.machote.field_como_utilizarlo
+field_name: field_como_utilizarlo
 entity_type: node
 bundle: machote
 label: '¿Cómo utilizarlo?'

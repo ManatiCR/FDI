@@ -1,11 +1,11 @@
-uuid: 331fef94-41d5-46a6-ba5f-2f585505eeda
+uuid: d3287dad-64df-456b-b4cd-ce4f72ab0957
 langcode: es
 status: true
 dependencies:
   module:
     - node
-id: node.field__como_utilizarlo_
-field_name: field__como_utilizarlo_
+id: node.field_como_utilizarlo
+field_name: field_como_utilizarlo
 entity_type: node
 type: string
 settings:

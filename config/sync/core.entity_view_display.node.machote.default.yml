@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.machote.body
-    - field.field.node.machote.field__como_utilizarlo_
+    - field.field.node.machote.field_como_utilizarlo
     - field.field.node.machote.field_imagen
     - field.field.node.machote.field_machote
     - field.field.node.machote.field_que_debes_tomar_en_cuenta
@@ -26,8 +26,8 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field__como_utilizarlo_:
-    weight: 105
+  field_como_utilizarlo:
+    weight: 107
     label: above
     settings:
       link_to_entity: false
