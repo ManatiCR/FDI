@@ -1,0 +1,19 @@
+uuid: 5bfb4c6b-77d2-41af-bce3-96e19f31ca88
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_que_debes_tomar_en_cuenta
+field_name: field_que_debes_tomar_en_cuenta
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

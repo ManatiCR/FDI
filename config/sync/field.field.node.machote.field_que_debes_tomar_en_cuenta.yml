@@ -1,0 +1,21 @@
+uuid: 3cc135ae-5d2d-449e-a93a-20e3af53c39c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_que_debes_tomar_en_cuenta
+    - node.type.machote
+  module:
+    - text
+id: node.machote.field_que_debes_tomar_en_cuenta
+field_name: field_que_debes_tomar_en_cuenta
+entity_type: node
+bundle: machote
+label: '¿Qué debés tomar en cuenta?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
