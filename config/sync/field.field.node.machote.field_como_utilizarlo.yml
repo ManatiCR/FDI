@@ -1,12 +1,10 @@
-uuid: d194dc4a-9d8d-40bd-89e8-b2d06e984623
+uuid: 1287f6c8-fc46-46b5-856a-a5a294dc40e4
 langcode: es
 status: true
 dependencies:
   config:
     - field.storage.node.field_como_utilizarlo
     - node.type.machote
-  module:
-    - text
 id: node.machote.field_como_utilizarlo
 field_name: field_como_utilizarlo
 entity_type: node
@@ -17,6 +15,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: false
-field_type: text_with_summary
+settings: {  }
+field_type: string
