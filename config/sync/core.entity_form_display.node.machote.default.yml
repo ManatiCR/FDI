@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.machote.body
-    - field.field.node.machote.field_como_utilizarlo
+    - field.field.node.machote.field__como_utilizarlo_
     - field.field.node.machote.field_imagen
     - field.field.node.machote.field_machote
+    - field.field.node.machote.field_que_debes_tomar_en_cuenta
     - image.style.thumbnail
     - node.type.machote
   module:
@@ -27,14 +28,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  field_como_utilizarlo:
-    weight: 3
+  field__como_utilizarlo_:
+    weight: 26
     settings:
-      rows: 9
-      summary_rows: 3
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea_with_summary
+    type: string_textfield
     region: content
   field_imagen:
     weight: 1
@@ -50,6 +50,14 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_que_debes_tomar_en_cuenta:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   title:
     type: string_textfield

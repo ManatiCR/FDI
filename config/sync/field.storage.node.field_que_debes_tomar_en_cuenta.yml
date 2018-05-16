@@ -1,14 +1,14 @@
-uuid: 466ceaff-6a8b-4169-846f-3608bf860f7e
+uuid: 5bfb4c6b-77d2-41af-bce3-96e19f31ca88
 langcode: es
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_como_utilizarlo
-field_name: field_como_utilizarlo
+id: node.field_que_debes_tomar_en_cuenta
+field_name: field_que_debes_tomar_en_cuenta
 entity_type: node
-type: text_with_summary
+type: text_long
 settings: {  }
 module: text
 locked: false

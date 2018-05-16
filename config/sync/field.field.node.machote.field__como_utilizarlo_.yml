@@ -1,0 +1,19 @@
+uuid: 1ad548f1-265e-4142-958d-b469852c7335
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__como_utilizarlo_
+    - node.type.machote
+id: node.machote.field__como_utilizarlo_
+field_name: field__como_utilizarlo_
+entity_type: node
+bundle: machote
+label: '¿Cómo utilizarlo?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

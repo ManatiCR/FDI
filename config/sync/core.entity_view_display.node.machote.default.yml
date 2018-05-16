@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.machote.body
-    - field.field.node.machote.field_como_utilizarlo
+    - field.field.node.machote.field__como_utilizarlo_
     - field.field.node.machote.field_imagen
     - field.field.node.machote.field_machote
+    - field.field.node.machote.field_que_debes_tomar_en_cuenta
     - node.type.machote
   module:
     - file
@@ -25,12 +26,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_como_utilizarlo:
-    weight: 102
+  field__como_utilizarlo_:
+    weight: 105
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: text_default
+    type: string
     region: content
   field_imagen:
     weight: 104
@@ -47,6 +49,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_que_debes_tomar_en_cuenta:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   links:
     weight: 100
