@@ -42,6 +42,22 @@ Install the local site
 ./scripts/fdi_local_install.sh
 ```
 
+### Update Core
+
+Show available updates
+
+```bash
+ahoy composer outdated
+```
+
+Update drupal core project
+
+```bash
+composer update drupal/core --with-dependencies
+```
+
+Checkout the changes already made within `composer.lock` file, this changes should to be **only** about drupal core and dependencies updates.
+
 ### Site UUID.
 Site uuid can be found in the installation script. You should create a variable named `SITE_UUID` in CircleCI and set it to that value so that CircleCI builds work as expected.
 
