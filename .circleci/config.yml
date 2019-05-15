@@ -161,9 +161,9 @@ jobs:
             php composer-setup.php && \
             php -r "unlink('composer-setup.php');"
             mv composer.phar /usr/bin/composer
-            mkdir $HOME/terminus && cd $HOME/terminus
+            mkdir terminus && cd terminus
             curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-            ln -s $HOME/terminus/vendor/bin/terminus /usr/bin/terminus
+            ln -s /var/www/fdi/terminus/vendor/bin/terminus /usr/bin/terminus
             terminus auth:login --machine-token=$PANTHEON_TOKEN
             cd /var/www/fdi
       - run: composer install
