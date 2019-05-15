@@ -47,7 +47,7 @@ jobs:
           name: Build site.
           command: |
             cp ./.circleci/settings.secret.php ./settings/
-            composer install
+            composer install --ignore-platform-reqs
             chmod 777 -R ./web/sites/default/files
             cd web
             if [ -f /var/www/fdi/config/sync/core.extension.yml ] ; then echo 'Install with config' ; /usr/bin/env PHP_OPTIONS="-d sendmail_path=`which true`" ../vendor/bin/drush si fdi -y ; ../vendor/bin/drush config-set "system.site" uuid $SITE_UUID -y ; ../vendor/bin/drush cim -y ; else echo 'Install without config' ; /usr/bin/env PHP_OPTIONS="-d sendmail_path=`which true`" ../vendor/bin/drush si fdi -y ; fi
@@ -80,7 +80,7 @@ jobs:
             php composer-setup.php && \
             php -r "unlink('composer-setup.php');"
             mv composer.phar /usr/bin/composer
-      - run: composer install
+      - run: composer install --ignore-platform-reqs
       - run:
           name: Install ahoy
           command: |
@@ -145,6 +145,75 @@ jobs:
             terminus drush fdi.live -- updb -y
             terminus drush fdi.live -- cim -y
             terminus drush fdi.live -- cr
+
+  deploy-multidev:
+    docker:
+      - image: tbfisher/drupal-nginx:php-7.1.x
+    working_directory: /var/www/fdi
+    steps:
+      - checkout
+      - run:
+          name: Install Composer and terminus
+          command: |
+            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
+            php -r "copy('https://composer.github.io/installer.sig', 'composer-setup.sig');" && \
+            php -r "if (hash_file('SHA384', 'composer-setup.php') === trim(file_get_contents('composer-setup.sig'))) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" && \
+            php composer-setup.php && \
+            php -r "unlink('composer-setup.php');"
+            mv composer.phar /usr/bin/composer
+            mkdir terminus && cd terminus
+            curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+            ln -s /var/www/fdi/terminus/vendor/bin/terminus /usr/bin/terminus
+            terminus auth:login --machine-token=$PANTHEON_TOKEN
+            cd /var/www/fdi
+      - run: composer install --ignore-platform-reqs
+      - run:
+          name: Install ahoy
+          command: |
+            apt-get update -y && apt-get install wget -y
+            wget -q https://github.com/ahoy-cli/ahoy/releases/download/2.0.0/ahoy-bin-`uname -s`-amd64 -O /usr/local/bin/ahoy && chmod +x /usr/local/bin/ahoy
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "d6:21:e2:82:3d:99:f4:f7:9e:ab:c8:0f:26:1f:86:29"
+      - run:
+          name: Create multidev environment
+          command: |
+            NEWBRANCH=$CIRCLE_BRANCH
+            LENGTH=${#NEWBRANCH}
+            if [ LENGTH > 10 ] ; then NEWBRANCH=${NEWBRANCH:8:9} ; fi
+            NEWBRANCH=${NEWBRANCH//-/}
+            NEWBRANCH=${NEWBRANCH,,}
+            terminus multidev:create fdi.live $NEWBRANCH || true
+      - run:
+          name: Deploy
+          command: |
+            NEWBRANCH=$CIRCLE_BRANCH
+            LENGTH=${#NEWBRANCH}
+            if [ LENGTH > 10 ] ; then NEWBRANCH=${NEWBRANCH:8:9} ; fi
+            NEWBRANCH=${NEWBRANCH//-/}
+            NEWBRANCH=${NEWBRANCH,,}
+            git config --global user.email "ci@estudiomanati.com"
+            git config --global user.name "CI BOT"
+            echo 'Host *' >> /root/.ssh/config
+            echo '   StrictHostKeyChecking no' >> /root/.ssh/config
+            ahoy site deploy $NEWBRANCH "Auto deploy triggered from master branch"
+      - run:
+          name: Deploy commands
+          command: |
+            NEWBRANCH=$CIRCLE_BRANCH
+            LENGTH=${#NEWBRANCH}
+            if [ LENGTH > 10 ] ; then NEWBRANCH=${NEWBRANCH:8:9} ; fi
+            NEWBRANCH=${NEWBRANCH//-/}
+            NEWBRANCH=${NEWBRANCH,,}
+            terminus drush fdi.$NEWBRANCH -- cr
+            terminus drush fdi.$NEWBRANCH -- sqlsan -y
+            terminus drush fdi.$NEWBRANCH -- updb -y
+            terminus drush fdi.$NEWBRANCH -- cim -y
+            terminus drush fdi.$NEWBRANCH -- cr
+            terminus lock:enable fdi.$NEWBRANCH -- $PANTHEON_WEB_AUTH_USER $PANTHEON_WEB_AUTH_PASS
+            echo "If everything worked, go to http://$NEWBRANCH-fdi.pantheonsite.io"
+
 workflows:
   version: 2
   build-deploys:
@@ -156,6 +225,17 @@ workflows:
           filters:
             branches:
               only: master
+      - deploy-multidev-hold:
+          type: approval
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - /feature\/.*/
+      - deploy-multidev:
+          requires:
+            - deploy-multidev-hold
       - deploy-test:
           requires:
             - deploy
