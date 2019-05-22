@@ -1,3 +1,7 @@
 {
-  "patches": {}
+  "patches": {
+    "drupal/rabbit_hole": {
+      "Change Entity typehint to EntityInterface": "https://www.drupal.org/files/issues/2019-03-20/3038539-5.patch"
+    }
+  }
 }
