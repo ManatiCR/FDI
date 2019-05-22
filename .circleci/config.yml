@@ -47,7 +47,7 @@ jobs:
           name: Build site.
           command: |
             cp ./.circleci/settings.secret.php ./settings/
-            composer install
+            composer install --ignore-platform-reqs
             chmod 777 -R ./web/sites/default/files
             cd web
             if [ -f /var/www/fdi/config/sync/core.extension.yml ] ; then echo 'Install with config' ; /usr/bin/env PHP_OPTIONS="-d sendmail_path=`which true`" ../vendor/bin/drush si fdi -y ; ../vendor/bin/drush config-set "system.site" uuid $SITE_UUID -y ; ../vendor/bin/drush cim -y ; else echo 'Install without config' ; /usr/bin/env PHP_OPTIONS="-d sendmail_path=`which true`" ../vendor/bin/drush si fdi -y ; fi
@@ -80,7 +80,7 @@ jobs:
             php composer-setup.php && \
             php -r "unlink('composer-setup.php');"
             mv composer.phar /usr/bin/composer
-      - run: composer install
+      - run: composer install --ignore-platform-reqs
       - run:
           name: Install ahoy
           command: |
