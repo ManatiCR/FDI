@@ -31,5 +31,6 @@ hidden:
   field_motivo_de_contacto: true
   field_nombre_del_sitio: true
   field_otro_motivo: true
+  field_sitio_web: true
   field_telefono: true
   langcode: true

@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Categorías recursos jurídicos'
 vid: categorias_recursos_juridicos
 description: ''
-hierarchy: 0
 weight: 0
