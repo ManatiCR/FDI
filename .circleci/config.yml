@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: kporras07/docker-drupal-nginx:php-7.3.x-backstop
+      - image: kporras07/docker-drupal-nginx:php-7.3.x
       - image: selenium/standalone-chrome-debug:3.6.0
       - image: mariadb:5.5
         environment:
