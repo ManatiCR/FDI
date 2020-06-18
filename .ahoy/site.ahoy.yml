@@ -35,3 +35,40 @@ commands:
       git checkout -- composer.lock
       composer install --ignore-platform-reqs
       git checkout -- composer.lock
+
+  install:
+    usage: Run install commands
+    cmd: |
+      SITE_UUID="c3bd695e-f9ea-47ea-8881-0e473dd8644b"
+      ahoy drush cc drush
+      echo "Installing..."
+      ahoy drush si fdi --account-pass=admin -y
+      echo "Set site uuid..."
+      ahoy drush config-set "system.site" uuid "$SITE_UUID" -y
+      echo "Importing config..."
+      if [ -f ./config/sync/core.extension.yml ] ; then ahoy drush cim -y ; fi
+      echo "Cleaning cache..."
+      ahoy drush cr
+      echo "Import default content..."
+      ahoy drush dcdi -y
+  install-from-db:
+    usage: Setup site using DB backup
+    cmd: |
+      if [ ! -f fdi.sql.gz ]; then
+        wget `terminus backup:get fdi.live --element=db` -O fdi.sql.gz
+      fi
+      ahoy drush cr
+      echo "Drop Database..."
+      ahoy drush sql-drop -y
+      echo "Import database..."
+      gunzip -c fdi.sql.gz | ahoy drush sqlc
+      echo "Sanitizing database..."
+      ahoy drush sqlsan -y
+      echo "Update database..."
+      ahoy drush updb -y
+      echo "Importing config..."
+      ahoy drush cim -y
+      echo "Cleaning cache..."
+      ahoy drush cr
+      echo "Generating an admin one time login link..."
+      ahoy drush uli
