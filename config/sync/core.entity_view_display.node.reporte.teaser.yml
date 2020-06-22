@@ -28,10 +28,13 @@ content:
 hidden:
   field_categoria_reporte: true
   field_codigo_de_seguimient: true
+  field_comentarios: true
   field_correo: true
+  field_estado: true
   field_latitud: true
   field_longitud: true
   field_lugar: true
   field_solicita_asesoria_o_apoyo: true
   field_subcategoria_reporte: true
+  field_ubicacion: true
   langcode: true

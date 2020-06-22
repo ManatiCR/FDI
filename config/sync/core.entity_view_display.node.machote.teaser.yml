@@ -29,4 +29,5 @@ hidden:
   field_como_utilizarlo: true
   field_imagen: true
   field_machote: true
+  field_que_debes_tomar_en_cuenta: true
   langcode: true
