@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Estado de reporte'
 vid: estado_de_reporte
 description: ''
-hierarchy: 0
 weight: 0

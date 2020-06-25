@@ -16,4 +16,8 @@ content:
     weight: 100
     region: content
 hidden:
+  body: true
+  field_categoria_recurso_juridico: true
+  field_enlace: true
+  field_vigencia: true
   langcode: true

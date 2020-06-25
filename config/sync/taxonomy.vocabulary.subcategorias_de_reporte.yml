@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Subcategorías de reporte'
 vid: subcategorias_de_reporte
 description: ''
-hierarchy: 0
 weight: 0
